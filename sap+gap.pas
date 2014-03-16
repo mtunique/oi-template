@@ -1,23 +1,3 @@
-SAP+GAP
-
-{
-ID: yw100101
-PROB: ditch
-LANG: PASCAL
- 
-   Test 1: TEST OK [0.000 secs, 900 KB]
-   Test 2: TEST OK [0.000 secs, 900 KB]
-   Test 3: TEST OK [0.000 secs, 900 KB]
-   Test 4: TEST OK [0.000 secs, 900 KB]
-   Test 5: TEST OK [0.000 secs, 900 KB]
-   Test 6: TEST OK [0.000 secs, 900 KB]
-   Test 7: TEST OK [0.000 secs, 900 KB]
-   Test 8: TEST OK [0.000 secs, 900 KB]
-   Test 9: TEST OK [0.000 secs, 900 KB]
-   Test 10: TEST OK [0.000 secs, 900 KB]
-   Test 11: TEST OK [0.000 secs, 900 KB]
-   Test 12: TEST OK [0.000 secs, 900 KB]
-}
 program c066;
 const
     ProName     = 'ditch';
