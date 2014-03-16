@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="5"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="aa.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="aa"/>
+        <CursorPos X="38" Y="14"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <General>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="0" HistoryIndex="-1"/>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Source Value="aa.pas"/>
+        <Line Value="15"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

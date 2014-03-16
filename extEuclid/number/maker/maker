@@ -1,0 +1,17 @@
+program Project1;
+var
+   n,x,i:longint;
+begin
+     assign(output,'number.in');
+     rewrite(output);
+     randomize;
+     n:=random(10)+1;
+     writeln(n);
+     for i:=1 to n do
+     begin
+          x:=random(1000)+1;
+          writeln(x,' ',random(x)+1);
+     end;
+     close(output);
+end.
+

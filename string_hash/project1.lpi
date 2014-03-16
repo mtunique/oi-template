@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="5"/>
+    <General>
+      <Flags>
+        <MainUnitHasUsesSectionForAllUnits Value="False"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=".exe"/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="project1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="project1"/>
+        <CursorPos X="2" Y="1"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="0" HistoryIndex="-1"/>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="5"/>
+    <PathDelim Value="\"/>
+    <CodeGeneration>
+      <Generate Value="Faster"/>
+    </CodeGeneration>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Watches Count="11">
+      <Item1>
+        <Expression Value="x"/>
+      </Item1>
+      <Item2>
+        <Expression Value="y"/>
+      </Item2>
+      <Item3>
+        <Expression Value="i"/>
+      </Item3>
+      <Item4>
+        <Expression Value="f"/>
+      </Item4>
+      <Item5>
+        <Expression Value="n"/>
+      </Item5>
+      <Item6>
+        <Expression Value="nn[t][x]"/>
+      </Item6>
+      <Item7>
+        <Expression Value="aa"/>
+      </Item7>
+      <Item8>
+        <Expression Value="bb"/>
+      </Item8>
+      <Item9>
+        <Expression Value="map[x][y]"/>
+      </Item9>
+      <Item10>
+        <Expression Value="w[map[x][y]]"/>
+      </Item10>
+      <Item11>
+        <Expression Value="box"/>
+      </Item11>
+    </Watches>
+  </Debugging>
+</CONFIG>

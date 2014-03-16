@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="5"/>
+    <General>
+      <Flags>
+        <MainUnitHasUsesSectionForAllUnits Value="False"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <IconPath Value="./"/>
+      <TargetFileExt Value=".exe"/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="path.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Project1"/>
+        <CursorPos X="14" Y="77"/>
+        <TopLine Value="60"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="24"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="1" HistoryIndex="0">
+      <Position1>
+        <Filename Value="path.pas"/>
+        <Caret Line="112" Column="43" TopLine="94"/>
+      </Position1>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="5"/>
+    <PathDelim Value="\"/>
+    <CodeGeneration>
+      <Generate Value="Faster"/>
+    </CodeGeneration>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Watches Count="18">
+      <Item1>
+        <Expression Value="x"/>
+      </Item1>
+      <Item2>
+        <Expression Value="y"/>
+      </Item2>
+      <Item3>
+        <Expression Value="z"/>
+      </Item3>
+      <Item4>
+        <Expression Value="num"/>
+      </Item4>
+      <Item5>
+        <Expression Value="ge"/>
+      </Item5>
+      <Item6>
+        <Expression Value="he[1]"/>
+      </Item6>
+      <Item7>
+        <Expression Value="he[2]"/>
+      </Item7>
+      <Item8>
+        <Expression Value="he[3]"/>
+      </Item8>
+      <Item9>
+        <Expression Value="he[4]"/>
+      </Item9>
+      <Item10>
+        <Expression Value="dis"/>
+      </Item10>
+      <Item11>
+        <Expression Value="o"/>
+      </Item11>
+      <Item12>
+        <Expression Value="v[he[i].p]"/>
+      </Item12>
+      <Item13>
+        <Expression Value="o[4]"/>
+      </Item13>
+      <Item14>
+        <Expression Value="pos"/>
+      </Item14>
+      <Item15>
+        <Expression Value="d[i]"/>
+      </Item15>
+      <Item16>
+        <Expression Value="he[o[y]].d"/>
+      </Item16>
+      <Item17>
+        <Expression Value="o[y]"/>
+      </Item17>
+      <Item18>
+        <Expression Value="nn"/>
+      </Item18>
+    </Watches>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

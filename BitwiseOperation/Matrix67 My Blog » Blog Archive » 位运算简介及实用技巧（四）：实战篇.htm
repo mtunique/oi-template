@@ -1,0 +1,776 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0041)http://www.matrix67.com/blog/archives/268 -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD 
+profile=http://gmpg.org/xfn/11><TITLE>Matrix67: My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META content="MSHTML 6.00.2900.5512" name=GENERATOR><!-- leave this for stats --><LINK 
+href="http://www.matrix67.com/favicon.ico" type=image/x-icon rel=icon><LINK 
+href="http://www.matrix67.com/favicon.ico" type=image/x-icon 
+rel="shortcut icon"><LINK media=screen 
+href="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/style.css" 
+type=text/css rel=stylesheet><!--[if lt ie 7]><LINK media=screen 
+href="http://www.matrix67.com/blog/wp-content/themes/CoolMist/ie-win.css" 
+type=text/css rel=stylesheet><![endif]--><LINK title="RSS 2.0" 
+href="http://www.matrix67.com/blog/feed.asp" type=application/rss+xml 
+rel=alternate><LINK title="RSS .92" href="http://www.matrix67.com/blog/feed/rss" 
+type=text/xml rel=alternate><LINK title="Atom 0.3" 
+href="http://www.matrix67.com/blog/feed/atom" type=application/atom+xml 
+rel=alternate><LINK href="http://www.matrix67.com/blog/xmlrpc.php" 
+rel=pingback><LINK title=2010年一月 
+href="http://www.matrix67.com/blog/archives/date/2010/01" rel=archives><LINK 
+title=2009年十二月 href="http://www.matrix67.com/blog/archives/date/2009/12" 
+rel=archives><LINK title=2009年十一月 
+href="http://www.matrix67.com/blog/archives/date/2009/11" rel=archives><LINK 
+title=2009年十月 href="http://www.matrix67.com/blog/archives/date/2009/10" 
+rel=archives><LINK title=2009年九月 
+href="http://www.matrix67.com/blog/archives/date/2009/09" rel=archives><LINK 
+title=2009年八月 href="http://www.matrix67.com/blog/archives/date/2009/08" 
+rel=archives><LINK title=2009年七月 
+href="http://www.matrix67.com/blog/archives/date/2009/07" rel=archives><LINK 
+title=2009年六月 href="http://www.matrix67.com/blog/archives/date/2009/06" 
+rel=archives><LINK title=2009年五月 
+href="http://www.matrix67.com/blog/archives/date/2009/05" rel=archives><LINK 
+title=2009年四月 href="http://www.matrix67.com/blog/archives/date/2009/04" 
+rel=archives><LINK title=2009年三月 
+href="http://www.matrix67.com/blog/archives/date/2009/03" rel=archives><LINK 
+title=2009年二月 href="http://www.matrix67.com/blog/archives/date/2009/02" 
+rel=archives><LINK title=2009年一月 
+href="http://www.matrix67.com/blog/archives/date/2009/01" rel=archives><LINK 
+title=2008年十二月 href="http://www.matrix67.com/blog/archives/date/2008/12" 
+rel=archives><LINK title=2008年十一月 
+href="http://www.matrix67.com/blog/archives/date/2008/11" rel=archives><LINK 
+title=2008年十月 href="http://www.matrix67.com/blog/archives/date/2008/10" 
+rel=archives><LINK title=2008年九月 
+href="http://www.matrix67.com/blog/archives/date/2008/09" rel=archives><LINK 
+title=2008年八月 href="http://www.matrix67.com/blog/archives/date/2008/08" 
+rel=archives><LINK title=2008年七月 
+href="http://www.matrix67.com/blog/archives/date/2008/07" rel=archives><LINK 
+title=2008年六月 href="http://www.matrix67.com/blog/archives/date/2008/06" 
+rel=archives><LINK title=2008年五月 
+href="http://www.matrix67.com/blog/archives/date/2008/05" rel=archives><LINK 
+title=2008年四月 href="http://www.matrix67.com/blog/archives/date/2008/04" 
+rel=archives><LINK title=2008年三月 
+href="http://www.matrix67.com/blog/archives/date/2008/03" rel=archives><LINK 
+title=2008年二月 href="http://www.matrix67.com/blog/archives/date/2008/02" 
+rel=archives><LINK title=2008年一月 
+href="http://www.matrix67.com/blog/archives/date/2008/01" rel=archives><LINK 
+title=2007年十二月 href="http://www.matrix67.com/blog/archives/date/2007/12" 
+rel=archives><LINK title=2007年十一月 
+href="http://www.matrix67.com/blog/archives/date/2007/11" rel=archives><LINK 
+title=2007年十月 href="http://www.matrix67.com/blog/archives/date/2007/10" 
+rel=archives><LINK title=2007年九月 
+href="http://www.matrix67.com/blog/archives/date/2007/09" rel=archives><LINK 
+title=2007年八月 href="http://www.matrix67.com/blog/archives/date/2007/08" 
+rel=archives><LINK title=2007年七月 
+href="http://www.matrix67.com/blog/archives/date/2007/07" rel=archives><LINK 
+title=2007年六月 href="http://www.matrix67.com/blog/archives/date/2007/06" 
+rel=archives><LINK title=2007年五月 
+href="http://www.matrix67.com/blog/archives/date/2007/05" rel=archives><LINK 
+title=2007年四月 href="http://www.matrix67.com/blog/archives/date/2007/04" 
+rel=archives><LINK title=2007年三月 
+href="http://www.matrix67.com/blog/archives/date/2007/03" rel=archives><LINK 
+title=2007年二月 href="http://www.matrix67.com/blog/archives/date/2007/02" 
+rel=archives><LINK title=2007年一月 
+href="http://www.matrix67.com/blog/archives/date/2007/01" rel=archives><LINK 
+title=2006年十二月 href="http://www.matrix67.com/blog/archives/date/2006/12" 
+rel=archives><LINK title=2006年十一月 
+href="http://www.matrix67.com/blog/archives/date/2006/11" rel=archives><LINK 
+title=2006年十月 href="http://www.matrix67.com/blog/archives/date/2006/10" 
+rel=archives><LINK title=2006年九月 
+href="http://www.matrix67.com/blog/archives/date/2006/09" rel=archives><LINK 
+title=2006年八月 href="http://www.matrix67.com/blog/archives/date/2006/08" 
+rel=archives><LINK title=2006年七月 
+href="http://www.matrix67.com/blog/archives/date/2006/07" rel=archives><LINK 
+title=2006年六月 href="http://www.matrix67.com/blog/archives/date/2006/06" 
+rel=archives><LINK title=2006年五月 
+href="http://www.matrix67.com/blog/archives/date/2006/05" rel=archives><LINK 
+title=2006年四月 href="http://www.matrix67.com/blog/archives/date/2006/04" 
+rel=archives><LINK title=2006年三月 
+href="http://www.matrix67.com/blog/archives/date/2006/03" rel=archives><LINK 
+title=2006年二月 href="http://www.matrix67.com/blog/archives/date/2006/02" 
+rel=archives><LINK title=2006年一月 
+href="http://www.matrix67.com/blog/archives/date/2006/01" rel=archives><LINK 
+title=2005年十二月 href="http://www.matrix67.com/blog/archives/date/2005/12" 
+rel=archives><LINK title=2005年十一月 
+href="http://www.matrix67.com/blog/archives/date/2005/11" rel=archives><LINK 
+title=2005年十月 href="http://www.matrix67.com/blog/archives/date/2005/10" 
+rel=archives><LINK title=2005年九月 
+href="http://www.matrix67.com/blog/archives/date/2005/09" rel=archives><LINK 
+title=2005年八月 href="http://www.matrix67.com/blog/archives/date/2005/08" 
+rel=archives><LINK title=2005年七月 
+href="http://www.matrix67.com/blog/archives/date/2005/07" rel=archives><LINK 
+title=RSD href="http://www.matrix67.com/blog/xmlrpc.php?rsd" 
+type=application/rsd+xml rel=EditURI><LINK 
+href="http://www.matrix67.com/blog/wp-includes/wlwmanifest.xml" 
+type=application/wlwmanifest+xml rel=wlwmanifest>
+<META content="WordPress 2.7" name=generator>
+<META content=1.13.0 name=DMSGuestbook><LINK media=screen 
+href="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/dmsguestbook.css" 
+type=text/css rel=stylesheet>
+<STYLE type=text/css>.recentcomments A {
+	PADDING-RIGHT: 0px! important; DISPLAY: inline! important; PADDING-LEFT: 0px! important; PADDING-BOTTOM: 0px! important; MARGIN: 0px; PADDING-TOP: 0px! important
+}
+</STYLE>
+</HEAD>
+<BODY>
+<DIV id=navigation>
+<UL>
+  <LI class=page_item><A href="http://www.matrix67.com/blog">Home</A> </LI>
+  <LI class="page_item page-item-5"><A title=TagsCloud 
+  href="http://www.matrix67.com/blog/tagscloud">TagsCloud</A> </LI>
+  <LI class="page_item page-item-485"><A title=Links 
+  href="http://www.matrix67.com/blog/links">Links</A> </LI>
+  <LI class="page_item page-item-2"><A title=AboutMe 
+  href="http://www.matrix67.com/blog/about">AboutMe</A> </LI>
+  <LI class="page_item page-item-2016"><A title=FAQ 
+  href="http://www.matrix67.com/blog/faq">FAQ</A> </LI>
+  <LI class="page_item page-item-547"><A title=GuestBook 
+  href="http://www.matrix67.com/blog/guestbook">GuestBook</A> </LI></UL></DIV>
+<DIV id=wrapper2>
+<DIV id=wrapper>
+<DIV id=content-wrapper>
+<DIV id=content>
+<DIV class=post-wrapper>
+<DIV 
+style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; MARGIN: 0px; WIDTH: 710px; PADDING-TOP: 0px; BORDER-BOTTOM: #4f5255 1px dotted"><SPAN 
+class=titles><A title="Permanent Link to 位运算简介及实用技巧（四）：实战篇" 
+href="http://www.matrix67.com/blog/archives/268" 
+rel=bookmark>位运算简介及实用技巧（四）：实战篇</A></SPAN> 
+<DIV><IMG style="MARGIN-BOTTOM: -3px" alt=icon2 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/icon2.gif"> <A 
+title="查看 Program Impossible 的全部文章" 
+href="http://www.matrix67.com/blog/archives/category/program-impossible" 
+rel="category tag">Program Impossible</A> | <IMG style="MARGIN-BOTTOM: -3px" 
+alt=icon4 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/icon4.gif"> 
+2007-07-26 1:47| <IMG style="MARGIN-BOTTOM: -3px" alt=icon3 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/icon3.gif">15 
+Comments | 本文内容遵从<A 
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" 
+target=_blank>CC版权协议</A> 转载请注明出自matrix67.com</DIV></DIV>
+<DIV class=post>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;下面分享的是我自己写的三个代码，里面有些题目也是我自己出的。这些代码都是在我的Pascal时代写的，恕不提供C语言了。代码写得并不好，我只是想告诉大家位运算在实战中的应用，包括了搜索和状态压缩DP方面的题目。其实大家可以在网上找到更多用位运算优化的题目，这里整理出一些自己写的代码，只是为了原创系列文章的完整性。这一系列文章到这里就结束了，希望大家能有所收获。<BR>&nbsp;&nbsp;&nbsp;&nbsp;Matrix67原创，转贴请注明出处。<BR><BR><BR>
+<BLOCKQUOTE>Problem : 费解的开关<BR><BR><A 
+  href="http://www.vijos.cn/Problem_Show.asp?id=1197" 
+  target=_blank>题目来源</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;06年NOIp模拟赛（一） by Matrix67 
+  第四题<BR><BR>问题描述<BR>&nbsp;&nbsp;&nbsp;&nbsp;你玩过“拉灯”游戏吗？25盏灯排成一个5x5的方形。每一个灯都有一个开关，游戏者可以改变它的状态。每一步，游戏者可以改变某一个灯的状态。游戏者改变一个灯的状态会产生连锁反应：和这个灯上下左右相邻的灯也要相应地改变其状态。<BR>&nbsp;&nbsp;&nbsp;&nbsp;我们用数字“1”表示一盏开着的灯，用数字“0”表示关着的灯。下面这种状态<BR><BR>10111<BR>01101<BR>10111<BR>10000<BR>11011<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;在改变了最左上角的灯的状态后将变成：<BR><BR>01111<BR>11101<BR>10111<BR>10000<BR>11011<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;再改变它正中间的灯后状态将变成：<BR><BR>01111<BR>11001<BR>11001<BR>10100<BR>11011<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;给定一些游戏的初始状态，编写程序判断游戏者是否可能在6步以内使所有的灯都变亮。<BR><BR>输入格式<BR>&nbsp;&nbsp;&nbsp;&nbsp;第一行有一个正整数n，代表数据中共有n个待解决的游戏初始状态。<BR>&nbsp;&nbsp;&nbsp;&nbsp;以下若干行数据分为n组，每组数据有5行，每行5个字符。每组数据描述了一个游戏的初始状态。各组数据间用一个空行分隔。<BR>&nbsp;&nbsp;&nbsp;&nbsp;对于30%的数据，n&lt;=5；<BR>&nbsp;&nbsp;&nbsp;&nbsp;对于100%的数据，n&lt;=500。<BR><BR>输出格式<BR>&nbsp;&nbsp;&nbsp;&nbsp;输出数据一共有n行，每行有一个小于等于6的整数，它表示对于输入数据中对应的游戏状态最少需要几步才能使所有灯变亮。<BR>&nbsp;&nbsp;&nbsp;&nbsp;对于某一个游戏初始状态，若6步以内无法使所有灯变亮，请输出“-1”。<BR><BR>样例输入<BR>3<BR>00111<BR>01011<BR>10001<BR>11010<BR>11100<BR><BR>11101<BR>11101<BR>11110<BR>11111<BR>11111<BR><BR>01111<BR>11111<BR>11111<BR>11111<BR>11111<BR><BR>样例输出<BR>3<BR>2<BR>-1
+  <P></P></BLOCKQUOTE>
+<P><BR><BR>程序代码<BR><CODE>const<BR>&nbsp;&nbsp; BigPrime=3214567;<BR>&nbsp;&nbsp; 
+MaxStep=6;<BR>type<BR>&nbsp;&nbsp; pointer=^rec;<BR>&nbsp;&nbsp; 
+rec=record<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+v:longint;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+step:integer;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+next:pointer;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+end;<BR><BR>var<BR>&nbsp;&nbsp; total:longint;<BR>&nbsp;&nbsp; 
+hash:array[0..BigPrime-1]of pointer;<BR>&nbsp;&nbsp; q:array[1..400000]of 
+rec;<BR><BR>function 
+update(a:longint;p:integer):longint;<BR>begin<BR>&nbsp;&nbsp; a:=a xor (1 shl 
+p);<BR>&nbsp;&nbsp; if p mod 5&lt;&gt;0 then a:=a xor (1 shl 
+(p-1));<BR>&nbsp;&nbsp; if (p+1) mod 5&lt;&gt;0 then a:=a xor (1 shl 
+(p+1));<BR>&nbsp;&nbsp; if p&lt;20 then a:=a xor (1 shl (p+5));<BR>&nbsp;&nbsp; 
+if p&gt;4 then a:=a xor (1 shl (p-5));<BR>&nbsp;&nbsp; 
+exit(a);<BR>end;<BR><BR>function 
+find(a:longint;step:integer):boolean;<BR>var<BR>&nbsp;&nbsp; 
+now:pointer;<BR>begin<BR>&nbsp;&nbsp; now:=hash[a mod BigPrime];<BR>&nbsp;&nbsp; 
+while now&lt;&gt;nil do<BR>&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if now^.v=a then 
+exit(true);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;now:=now^.next;<BR>&nbsp;&nbsp; 
+end;<BR><BR>&nbsp;&nbsp; new(now);<BR>&nbsp;&nbsp; now^.v:=a;<BR>&nbsp;&nbsp; 
+now^.step:=step;<BR>&nbsp;&nbsp; now^.next:=hash[a mod 
+BigPrime];<BR>&nbsp;&nbsp; hash[a mod BigPrime]:=now;<BR>&nbsp;&nbsp; 
+total:=total+1;<BR>&nbsp;&nbsp; exit(false);<BR>end;<BR><BR>procedure 
+solve;<BR>var<BR>&nbsp;&nbsp; p:integer;<BR>&nbsp;&nbsp; 
+close:longint=0;<BR>&nbsp;&nbsp; open:longint=1;<BR>begin<BR>&nbsp;&nbsp; find(1 
+shl 25-1,0);<BR>&nbsp;&nbsp; q[1].v:=1 shl 25-1;<BR>&nbsp;&nbsp; 
+q[1].step:=0;<BR>&nbsp;&nbsp; 
+repeat<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inc(close);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for 
+p:=0 to 24 do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if not 
+find(update(q[close].v,p),q[close].step+1) and (q[close].step+1&lt;MaxStep) 
+then<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open:=open+1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q[open].v:=update(q[close].v,p);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;q[open].step:=q[close].step+1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+end;<BR>&nbsp;&nbsp; until close&gt;=open;<BR>end;<BR><BR>procedure 
+print(a:longint);<BR>var<BR>&nbsp;&nbsp; now:pointer;<BR>begin<BR>&nbsp;&nbsp; 
+now:=hash[a mod BigPrime];<BR>&nbsp;&nbsp; while now&lt;&gt;nil 
+do<BR>&nbsp;&nbsp; begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if now^.v=a 
+then<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+writeln(now^.step);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+exit;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;now:=now^.next;<BR>&nbsp;&nbsp; 
+end;<BR>&nbsp;&nbsp; writeln(-1);<BR>end;<BR><BR>procedure 
+main;<BR>var<BR>&nbsp;&nbsp; ch:char;<BR>&nbsp;&nbsp; 
+i,j,n:integer;<BR>&nbsp;&nbsp; t:longint;<BR>begin<BR>&nbsp;&nbsp; 
+readln(n);<BR>&nbsp;&nbsp; for i:=1 to n do<BR>&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t:=0;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for 
+j:=1 to 25 
+do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+read(ch);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+t:=t*2+ord(ch)-48;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if j mod 
+5=0 then 
+readln;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(t);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+i&lt;n then readln;<BR>&nbsp;&nbsp; end;<BR>end;<BR><BR>begin<BR>&nbsp;&nbsp; 
+solve;<BR>&nbsp;&nbsp; 
+main;<BR>end.</CODE><BR><BR><STRONG>=======================&nbsp;&nbsp;性感的分割线&nbsp;&nbsp;=======================</STRONG><BR><BR><BR>
+<BLOCKQUOTE>Problem : garden / 
+  和MM逛花园<BR><BR>题目来源<BR>&nbsp;&nbsp;&nbsp;&nbsp;<A 
+  href="http://www.matrix67.com/blog/article.asp?id=241" 
+  target=_blank>07年Matrix67生日邀请赛</A>第四题<BR><BR>问题描述<BR>&nbsp;&nbsp;&nbsp;&nbsp;花园设计强调，简单就是美。Matrix67常去的花园有着非常简单的布局：花园的所有景点的位置都是“对齐”了的，这些景点可以看作是平面坐标上的格点。相邻的景点之间有小路相连，这些小路全部平行于坐标轴。景点和小路组成了一个“不完整的网格”。<BR>&nbsp;&nbsp;&nbsp;&nbsp;一个典型的花园布局如左图所示。花园布局在6行4列的网格上，花园的16个景点的位置用红色标注在了图中。黑色线条表示景点间的小路，其余灰色部分实际并不存在。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/prob4.gif" 
+  border=0><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;Matrix67 
+  的生日那天，他要带着他的MM在花园里游玩。Matrix67不会带MM两次经过同一个景点，因此每个景点最多被游览一次。他和他的MM边走边聊，他们是如此的投入以致于他们从不会“主动地拐弯”。也就是说，除非前方已没有景点或是前方的景点已经访问过，否则他们会一直往前走下去。当前方景点不存在或已游览过时，Matrix67会带MM另选一个方向继续前进。由于景点个数有限，访问过的景点将越来越多，迟早会出现不能再走的情况（即四个方向上的相邻景点都访问过了），此时他们将结束花园的游览。Matrix67希望知道以这种方式游览花园是否有可能遍历所有的景点。Matrix67可以选择从任意一个景点开始游览，以任意一个景点结束。<BR>&nbsp;&nbsp;&nbsp;&nbsp;在上图所示的花园布局中，一种可能的游览方式如右图所示。这种浏览方式从(1,2)出发，以(2,4)结束，经过每个景点恰好一次。<BR><BR>输入格式<BR>&nbsp;&nbsp;&nbsp;&nbsp;第一行输入两个用空格隔开的正整数m和n，表示花园被布局在m行n列的网格上。<BR>&nbsp;&nbsp;&nbsp;&nbsp;以下m行每行n个字符，字符“0”表示该位置没有景点，字符“1”表示对应位置有景点。这些数字之间没有空格。<BR><BR>输出格式<BR>&nbsp;&nbsp;&nbsp;&nbsp;你的程序需要寻找满足“不主动拐弯”性质且遍历所有景点的游览路线。<BR>&nbsp;&nbsp;&nbsp;&nbsp;如果没有这样的游览路线，请输出一行“Impossible”（不带引号，注意大小写）。<BR>&nbsp;&nbsp;&nbsp;&nbsp;如果存在游览路线，请依次输出你的方案中访问的景点的坐标，每行输出一个。坐标的表示格式为“(x,y)”，代表第x行第y列。<BR>&nbsp;&nbsp;&nbsp;&nbsp;如果有多种方案，你只需要输出其中一种即可。评测系统可以判断你的方案的正确性。<BR><BR>样例输入<BR>6 
+  4<BR>1100<BR>1001<BR>1111<BR>1100<BR>1110<BR>1110<BR><BR>样例输出<BR>(1,2)<BR>(1,1)<BR>(2,1)<BR>(3,1)<BR>(4,1)<BR>(5,1)<BR>(6,1)<BR>(6,2)<BR>(6,3)<BR>(5,3)<BR>(5,2)<BR>(4,2)<BR>(3,2)<BR>(3,3)<BR>(3,4)<BR>(2,4)<BR><BR>数据规模<BR>&nbsp;&nbsp;&nbsp;&nbsp;对于30%的数据，n,m&lt;=5；<BR>&nbsp;&nbsp;&nbsp;&nbsp;对于100%的数据，n,m&lt;=10。
+  <P></P></BLOCKQUOTE>
+<P><BR><BR>程序代码：<BR><CODE>program garden;<BR><BR>const<BR>&nbsp;&nbsp; 
+dir:array[1..4,1..2]of integer=<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+((1,0),(0,1),(-1,0),(0,-1));<BR><BR>type<BR>&nbsp;&nbsp; arr=array[1..10]of 
+integer;<BR>&nbsp;&nbsp; rec=record x,y:integer;end;<BR><BR>var<BR>&nbsp;&nbsp; 
+map:array[0..11,0..11]of boolean;<BR>&nbsp;&nbsp; ans:array[1..100]of 
+rec;<BR>&nbsp;&nbsp; n,m,max:integer;<BR>&nbsp;&nbsp; 
+step:integer=1;<BR>&nbsp;&nbsp; state:arr;<BR><BR>procedure 
+readp;<BR>var<BR>&nbsp;&nbsp; i,j:integer;<BR>&nbsp;&nbsp; 
+ch:char;<BR>begin<BR>&nbsp;&nbsp; readln(m,n);<BR>&nbsp;&nbsp; for i:=1 to n 
+do<BR>&nbsp;&nbsp; begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for j:=1 to m 
+do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+read(ch);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+map[i,j]:=(ch='1');<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+inc(max,ord( map[i,j] 
+))<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<BR>&nbsp;&nbsp; 
+readln;<BR>&nbsp;&nbsp; end;<BR>end;<BR><BR>procedure 
+writep;<BR>var<BR>&nbsp;&nbsp; i:integer;<BR>begin<BR>&nbsp;&nbsp; for i:=1 to 
+step do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writeln( '(' , ans[i].x , ',' , 
+ans[i].y , ')' );<BR>end;<BR><BR>procedure 
+solve(x,y:integer);<BR>var<BR>&nbsp;&nbsp; tx,ty,d:integer;<BR>&nbsp;&nbsp; 
+step_cache:integer;<BR>&nbsp;&nbsp; state_cache:arr;<BR>begin<BR>&nbsp;&nbsp; 
+step_cache:=step;<BR>&nbsp;&nbsp; state_cache:=state;<BR>&nbsp;&nbsp; if 
+step=max then<BR>&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writep;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit;<BR>&nbsp;&nbsp; 
+end;<BR><BR>&nbsp;&nbsp; for d:=1 to 4 do<BR>&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tx:=x+dir[d,1];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ty:=y+dir[d,2];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while 
+map[tx,ty] and ( not state[tx] and(1 shl (ty-1) )&gt;0) 
+do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+inc(step);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ans[step].x:=tx;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ans[step].y:=ty;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+state[tx]:=state[tx] or ( 1 shl (ty-1) 
+);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+tx:=tx+dir[d,1];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ty:=ty+dir[d,2];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tx:=tx-dir[d,1];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ty:=ty-dir[d,2];<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+(tx&lt;&gt;x) or (ty&lt;&gt;y) then 
+solve(tx,ty);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state:=state_cache;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;step:=step_cache;<BR>&nbsp;&nbsp; 
+end;<BR>end;<BR><BR>{====main====}<BR>var<BR>&nbsp;&nbsp; 
+i,j:integer;<BR>begin<BR>&nbsp;&nbsp; assign(input,'garden.in');<BR>&nbsp;&nbsp; 
+reset(input);<BR>&nbsp;&nbsp; assign(output,'garden.out');<BR>&nbsp;&nbsp; 
+rewrite(output);<BR><BR>&nbsp;&nbsp; readp;<BR>&nbsp;&nbsp; for i:=1 to n 
+do<BR>&nbsp;&nbsp; for j:=1 to m do<BR>&nbsp;&nbsp;&nbsp;&nbsp; if map[i,j] 
+then<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ans[1].x:=i;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ans[1].y:=j;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state[i]:=1 
+shl 
+(j-1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;solve(i,j);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state[i]:=0;<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+end;<BR><BR>&nbsp;&nbsp; close(input);<BR>&nbsp;&nbsp; 
+close(output);<BR>end.</CODE><BR><BR><STRONG>=======================&nbsp;&nbsp;性感的分割线&nbsp;&nbsp;=======================</STRONG><BR><BR><BR>
+<BLOCKQUOTE>Problem : cowfood / 
+  玉米地<BR><BR>题目来源<BR>&nbsp;&nbsp;&nbsp;&nbsp;USACO月赛<BR><BR>问题描述<BR>&nbsp;&nbsp;&nbsp;&nbsp;农夫约翰购买了一处肥沃的矩形牧场，分成M*N(1&lt;=M&lt;=12; 
+  1&lt;=N&lt;=12)个格子。他想在那里的一些格子中种植美味的玉米。遗憾的是，有些格子区域的土地是贫瘠的，不能耕种。<BR>&nbsp;&nbsp;&nbsp;&nbsp;精明的约翰知道奶牛们进食时不喜欢和别的牛相邻，所以一旦在一个格子中种植玉米，那么他就不会在相邻的格子中种植，即没有两个被选中的格子拥有公共边。他还没有最终确定哪些格子要选择种植玉米。<BR>&nbsp;&nbsp;&nbsp;&nbsp;作为一个思想开明的人，农夫约翰希望考虑所有可行的选择格子种植方案。由于太开明，他还考虑一个格子都不选择的种植方案！请帮助农夫约翰确定种植方案总数。<BR><BR>输入格式:<BR>&nbsp;&nbsp;&nbsp;&nbsp;第一行：两个用空格分隔的整数M和N<BR>&nbsp;&nbsp;&nbsp;&nbsp;第二行到第M+1行：第i+1行描述牧场第i行每个格子的情况，N个用空格分隔的整数，表示这个格子是否可以种植（1表示肥沃的、适合种植，0表示贫瘠的、不可种植）<BR><BR>输出格式<BR>&nbsp;&nbsp;&nbsp;&nbsp;一个整数，农夫约翰可选择的方案总数除以 
+  100,000,000 的余数<BR><BR>样例输入<BR>2 3<BR>1 1 1<BR>0 1 
+  0<BR><BR>样例输出<BR>9<BR><BR>样例说明<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;给可以种植玉米的格子编号：<BR><SPAN 
+  style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 2 
+  3<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;只种一个格子的方案有四种(1,2,3或4)，种植两个格子的方案有三种(13,14或34)，种植三个格子的方案有一种(134)，还有一种什么格子都不种。<BR>&nbsp;&nbsp;&nbsp;&nbsp;4+3+1+1=9。<BR><BR>数据规模<BR>&nbsp;&nbsp;&nbsp;&nbsp;对于30%的数据，N,M&lt;=4；<BR>&nbsp;&nbsp;&nbsp;&nbsp;对于100%的数据，N,M&lt;=12。
+  <P></P></BLOCKQUOTE>
+<P><BR><BR>程序代码：<BR><CODE>program cowfood;<BR><BR>const<BR>&nbsp;&nbsp; 
+d=100000000;<BR>&nbsp;&nbsp; MaxN=12;<BR><BR>var<BR>&nbsp;&nbsp; 
+f:array[0..MaxN,1..2000]of longint;<BR>&nbsp;&nbsp; w:array[1..2000,1..2000]of 
+boolean;<BR>&nbsp;&nbsp; st:array[0..2000]of integer;<BR>&nbsp;&nbsp; 
+map:array[0..MaxN]of integer;<BR>&nbsp;&nbsp; m,n:integer;<BR><BR>function 
+Impossible(a:integer):boolean;<BR>var<BR>&nbsp;&nbsp; i:integer;<BR>&nbsp;&nbsp; 
+flag:boolean=false;<BR>begin<BR>&nbsp;&nbsp; for i:=1 to MaxN do<BR>&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if flag and (a and 1=1) then 
+exit(true);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag:=(a and 
+1=1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a:=a shr 1;<BR>&nbsp;&nbsp; 
+end;<BR>&nbsp;&nbsp; exit(false);<BR>end;<BR><BR>function 
+Conflict(a,b:integer):boolean;<BR>var<BR>&nbsp;&nbsp; 
+i:integer;<BR>begin<BR>&nbsp;&nbsp; for i:=1 to MaxN do<BR>&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (a and 1=1) and (b and 1=1) then 
+exit(true);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a:=a shr 
+1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b:=b shr 1;<BR>&nbsp;&nbsp; 
+end;<BR>&nbsp;&nbsp; exit(false);<BR>end;<BR><BR>function 
+CanPlace(a,b:integer):boolean;<BR>begin<BR>&nbsp;&nbsp; exit(a or 
+b=b);<BR>end;<BR><BR>procedure FindSt;<BR>var<BR>&nbsp;&nbsp; 
+i:integer;<BR>begin<BR>&nbsp;&nbsp; for i:=0 to 1 shl MaxN-1 
+do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not Impossible(i) 
+then<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+inc(st[0]);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+st[st[0]]:=i;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<BR>end;<BR><BR>procedure 
+Init;<BR>var<BR>&nbsp;&nbsp; i,j:integer; <BR>begin<BR>&nbsp;&nbsp; for i:=1 to 
+st[0] do<BR>&nbsp;&nbsp; for j:=i to st[0] 
+do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not Conflict(st[i],st[j]) 
+then<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+w[i,j]:=true;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+w[j,i]:=true;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<BR>end;<BR><BR>procedure 
+Readp;<BR>var<BR>&nbsp;&nbsp; i,j,t,v:integer;<BR>begin<BR>&nbsp;&nbsp; 
+readln(m,n);<BR>&nbsp;&nbsp; for i:=1 to m do<BR>&nbsp;&nbsp; 
+begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v:=0;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for 
+j:=1 to n 
+do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;begin<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+read(t);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+v:=v*2+t;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map[i]:=v;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readln;<BR>&nbsp;&nbsp; 
+end;<BR>end;<BR><BR>procedure Solve;<BR>var<BR>&nbsp;&nbsp; 
+i,j,k:integer;<BR>begin<BR>&nbsp;&nbsp; f[0,1]:=1;<BR>&nbsp;&nbsp; map[0]:=1 shl 
+n-1;<BR>&nbsp;&nbsp; for i:=1 to m do<BR>&nbsp;&nbsp; for j:=1 to st[0] 
+do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not CanPlace(st[j],map[i]) then 
+f[i,j]:=-1 else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for k:=1 to 
+st[0] do if (f[i-1,k]&lt;&gt;-1) and w[j,k] 
+then<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+f[i,j]:=(f[i,j]+f[i-1,k]) mod d;<BR>end;<BR><BR>procedure 
+Writep;<BR>var<BR>&nbsp;&nbsp; j:integer;<BR>&nbsp;&nbsp; 
+ans:longint=0;<BR>begin<BR>&nbsp;&nbsp; for j:=1 to st[0] 
+do<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if f[m,j]&lt;&gt;-1 then 
+ans:=(ans+f[m,j]) mod d;<BR>&nbsp;&nbsp; 
+writeln(ans);<BR>end;<BR><BR>begin<BR>&nbsp;&nbsp; 
+assign(input,'cowfood.in');<BR>&nbsp;&nbsp; reset(input);<BR>&nbsp;&nbsp; 
+assign(output,'cowfood.out');<BR>&nbsp;&nbsp; 
+rewrite(output);<BR><BR>&nbsp;&nbsp; FindSt;<BR>&nbsp;&nbsp; 
+Init;<BR>&nbsp;&nbsp; Readp;<BR>&nbsp;&nbsp; Solve;<BR>&nbsp;&nbsp; 
+Writep;<BR><BR>&nbsp;&nbsp; close(input);<BR>&nbsp;&nbsp; 
+close(output);<BR>end.</CODE></P>
+<DIV style="MARGIN: 4px 0px 6px -6px">
+<SCRIPT type=text/javascript><!--
+		google_ad_client = "pub-8918918108662869";
+		/* 728x90, 创建于 08-4-2 */
+		google_ad_slot = "5288878306";
+		google_ad_width = 728;
+		google_ad_height = 90;
+	//-->
+	</SCRIPT>
+
+<SCRIPT 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/show_ads.js" 
+type=text/javascript>
+	</SCRIPT>
+</DIV>
+<DIV class=post-footer>Posted in <A title="查看 Program Impossible 的全部文章" 
+href="http://www.matrix67.com/blog/archives/category/program-impossible" 
+rel="category tag">Program Impossible</A> <BR>Tags: <A 
+href="http://www.matrix67.com/blog/archives/tag/pascalè¯&shy;è¨" 
+rel=tag>Pascal语言</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/å¨æè§å" rel=tag>动态规划</A>, 
+<A href="http://www.matrix67.com/blog/archives/tag/æç´¢" rel=tag>搜索</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/äºè¿å¶" rel=tag>二进制</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/ä»£ç&nbsp;" rel=tag>代码</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/ä½è¿ç®" 
+rel=tag>位运算</A><BR>Trackback: 
+http://www.matrix67.com/blog/archives/268/trackback<BR><STRONG>我猜您可能还喜欢：</STRONG><BR>
+<UL>
+  <LI><A title=2007-07-26 href="http://www.matrix67.com/blog/archives/266" 
+  rel=bookmark>位运算简介及实用技巧（三）：进阶篇(2)</A> 
+  <LI><A title=2007-07-23 href="http://www.matrix67.com/blog/archives/263" 
+  rel=bookmark>位运算简介及实用技巧（一）：基础篇</A> 
+  <LI><A title=2007-07-24 href="http://www.matrix67.com/blog/archives/264" 
+  rel=bookmark>位运算简介及实用技巧（二）：进阶篇(1)</A> 
+  <LI><A title=2007-08-08 href="http://www.matrix67.com/blog/archives/280" 
+  rel=bookmark>神奇的分形艺术（三）：Sierpinski三角形</A> 
+  <LI><A title=2007-05-15 href="http://www.matrix67.com/blog/archives/199" 
+  rel=bookmark>Matrix67生日邀请赛 完全题解发布</A> 
+  <LI><A title=2007-08-04 href="http://www.matrix67.com/blog/archives/276" 
+  rel=bookmark>十个利用矩阵乘法解决的经典题目</A> 
+  <LI><A title=2007-08-31 href="http://www.matrix67.com/blog/archives/301" 
+  rel=bookmark>Tupper自我指涉公式：图象里竟然包含式子本身</A> 
+  <LI><A title=2008-09-28 href="http://www.matrix67.com/blog/archives/830" 
+  rel=bookmark>趣题：尽可能用奇数次猜测完成猜数游戏</A> </LI></UL><!-- Similar Posts took 88.614 ms --></DIV></DIV></DIV><!-- You can start editing here. --><A 
+name=comments></A>
+<H2 style="BORDER-TOP: #4f5255 1px dotted; MARGIN-TOP: 4px; PADDING-TOP: 6px">15 
+条回复</H2>
+<UL class=commentlist>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 沙发 | <SMALL class=commentmetadata>2007-07-26 
+  11:20 </SMALL>| <A name=comment-1165></A>yiyi 说： 
+  <P>sofa!</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 板凳 | <SMALL class=commentmetadata>2007-07-26 
+  20:51 </SMALL>| <A name=comment-1166></A>Voldemort 说： 
+  <P>拜托，程序加点注释或者算法介绍好不好？<BR>这么长的程序，要人家一个一个看很累欸。</P>
+  <P><SPAN style="COLOR: red">回复：每个函数是干啥的看函数名就知道了<BR>有时间我再来加注释吧</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地毯 | <SMALL class=commentmetadata>2007-07-26 
+  21:05 </SMALL>| <A name=comment-1167></A>Andriy 说： 
+  <P>&nbsp;&nbsp; M67的代码写法和我的好像啊。。。<BR>&nbsp;&nbsp;可是为什么感觉我的没这么好看呢 。</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地板 | <SMALL class=commentmetadata>2007-07-27 
+  3:52 </SMALL>| <A name=comment-1168></A>Ronice 说： 
+  <P>有些别扭 </P>
+  <P>最后貌似少了两行什么东东 ~</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地下室 | <SMALL class=commentmetadata>2007-07-27 
+  3:54 </SMALL>| <A name=comment-1169></A>Ronice 说： 
+  <P>[eek]原来在前面……<BR>文章太长…… <BR>看到后面就忘记前几行了</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地基 | <SMALL class=commentmetadata>2007-07-27 
+  16:15 </SMALL>| <A name=comment-1170></A>狗狗 说： 
+  <P>Andriy MM..<BR>学P的代码大致这个写法...</P>
+  <P><SPAN 
+  style="COLOR: red">回复：支持！pascal最普遍、最准确的写法就是这样，写出来很好看；而写C代码不同人有不同习惯（比如{的位置），而且改代码风格改过去改过来老是觉得不好看</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地壳 | <SMALL class=commentmetadata>2008-01-29 
+  4:58 </SMALL>| <A name=comment-1171></A>BY 说： 
+  <P>读读这句话<BR>如果改变其中一盏灯则它本身以及它下面一格的和下面两格的以及左下一格的和右下一格的都会变</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/386f9febe45f9f382b42f6aaccf6a797.jpg" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地幔 | <SMALL class=commentmetadata>2008-04-05 
+  12:57 </SMALL>| <A name=comment-3298></A><A class=url href="http://251815992/" 
+  rel="external nofollow">lychees</A> 说： 
+  <P>BigPrime=3214567;<BR>- -弱弱的问一下...<BR>这个是怎么得额来的哦？</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files\ad516503a11cd5ca435acc9bb6523536(1).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地核 | <SMALL class=commentmetadata>2008-08-25 
+  15:35 </SMALL>| <A name=comment-158899></A>cyZgift 说： 
+  <P>分割线让人无语啊</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 10楼 | <SMALL class=commentmetadata>2008-12-11 
+  9:42 </SMALL>| <A name=comment-175609></A><A class=url 
+  href="http://planet.blankyao.cn/bit-computing-actual.html" 
+  rel="external nofollow">位运算简介及实用技巧（四）：实战篇 | Planet of CODE</A> 说： 
+  <P>[...] <A href="http://www.matrix67.com/blog/archives/268" 
+  rel=nofollow>http://www.matrix67.com/blog/archives/268</A> « [...]</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files\ad516503a11cd5ca435acc9bb6523536(2).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 11楼 | <SMALL class=commentmetadata>2009-01-30 
+  14:29 </SMALL>| <A name=comment-177808></A>cloudygoose 说： 
+  <P>我来补充一下题解：<BR>费解的开关<BR>首先可以把25个灯表示成25位二进制，然后再转成十进制。灯的转换可以用“要转换的灯 xor 
+  1”来做，因为xor 
+  1就是01相反。本题搜索的巧妙之处就是从最终状态（全1）反向BFS，搜6步，然后将状态用hash存下。以后输出直接拿出来用就可以了，如果在hash表中找不到就输出-1。<BR>注意：输入全1输出0。</P>
+  <P>和MM逛花园<BR>直接枚举所有初始情况的DFS，用位运算把每行（已经走过的点为1）的状态存下来，用来判断点是否已经走过。</P>
+  <P>玉米地<BR>把地图存在map中。<BR>先来看单单一行能哪些状态是可行的，不考虑不能种的地，我们需要状态中不存在连续的1，用程序中的impossible函数来判断。可行的状态存在st数组中。<BR>然后地推，f[I,j]表示到第i行，第i行状态为j的方案数，枚举第i-1行的状态k。要满足两个条件：<BR>1：j和map[i]不能冲突，也就是不能有不能种的地。<BR>2:k和map[i-1]不能冲突。<BR>3：j和k不能冲突。<BR>那么f[I,j]:=f[I,j]+f[I-1,k]。</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files\ad516503a11cd5ca435acc9bb6523536(3).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 12楼 | <SMALL class=commentmetadata>2009-09-10 
+  15:55 </SMALL>| <A name=comment-186975></A>xp 说： 
+  <P>orz</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files\ad516503a11cd5ca435acc9bb6523536(4).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 12a楼 | <SMALL class=commentmetadata>2009-10-04 
+  23:39 </SMALL>| <A name=comment-187921></A>Demon 说： 
+  <P>第三题的impossible是不是。。<BR>直接exit(not(a xor (a shr 1))=0)就行了吧。。</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files\ad516503a11cd5ca435acc9bb6523536(4).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 14楼 | <SMALL class=commentmetadata>2009-10-05 
+  1:08 </SMALL>| <A name=comment-187922></A>Demon 说： 
+  <P>错了。。楼上xor改为and。。</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files\ad516503a11cd5ca435acc9bb6523536(5).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 15楼 | <SMALL class=commentmetadata>2009-11-20 
+  21:18 </SMALL>| <A name=comment-190106></A>OIer:liyue 说： 
+  <P>Orz Martrix67 神牛…<BR>明天就NOIP2009了</P></DIV></LI></UL><A name=respond></A>
+<H3>您也随便说几句吧：</H3>
+<FORM id=commentform action=http://www.matrix67.com/blog/wp-comments-post.php 
+method=post>
+<P><INPUT class=styled id=author tabIndex=1 size=22 name=author> <LABEL 
+for=author>您的昵称（必填）</LABEL> <INPUT type=hidden value=268 name=comment_post_ID> 
+<INPUT type=hidden value=/blog/archives/268 name=redirect_to></P>
+<P><INPUT id=email tabIndex=2 size=22 name=email> <LABEL 
+for=email>您的E-mail地址（必填）</LABEL></P>
+<P><INPUT id=url tabIndex=3 size=22 name=url> <LABEL 
+for=url>您的网站（可选）</LABEL></P><!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<P><TEXTAREA id=comment tabIndex=4 name=comment rows=5 cols=100></TEXTAREA></P>
+<P><STRONG>请注意：</STRONG>如果您是第一次在本站发表评论，您的评论需要通过管理员的审核。</P>
+<P>您可以在<A href="http://gravatar.com/" target=_blank>Gravatar</A>设置您的头像。</P>
+<P><INPUT id=submit tabIndex=5 type=submit value=提交评论 name=submit></P></FORM>
+<P class=pagination></P></DIV></DIV>
+<DIV id=sidebar-wrapper>
+<DIV id=sidebar>
+<DIV class=sideblock>
+<H3>Category</H3>
+<UL>
+  <LI class="cat-item cat-item-12"><A title="查看 Brain Storm 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/brain-storm">Brain 
+  Storm</A> (337) </LI>
+  <LI class="cat-item cat-item-14"><A title="查看 Design of Design 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/design-of-design">Design 
+  of Design</A> (38) </LI>
+  <LI class="cat-item cat-item-10"><A title="查看 Internet Vision 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/internet-vision">Internet 
+  Vision</A> (120) </LI>
+  <LI class="cat-item cat-item-11"><A title="查看 Movie Time 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/movie-time">Movie 
+  Time</A> (46) </LI>
+  <LI class="cat-item cat-item-9"><A title="查看 Program Impossible 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/program-impossible">Program 
+  Impossible</A> (139) </LI>
+  <LI class="cat-item cat-item-8"><A title="查看 This is My Life 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/this-is-my-life">This is 
+  My Life</A> (97) </LI>
+  <LI class="cat-item cat-item-13"><A title="查看 Tough Computer 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/tough-computer">Tough 
+  Computer</A> (28) </LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Subscribe</H3>
+<DIV class=textwidget><A title="Matrix67: My Blog" 
+style="MARGIN-TOP: -18px; FLOAT: right; MARGIN-RIGHT: 12px" 
+href="http://www.matrix67.com/blog/feed.asp"><IMG 
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" 
+alt="" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/orange_e.gif"></A> 
+
+<UL>
+  <LI><A 
+  href="http://www.zhuaxia.com/add_channel.php?url=http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>抓虾</A> </LI>
+  <LI><A href="http://www.anothr.com/add?url=http://www.matrix67.com/blog/" 
+  target=_blank>哪吒</A> </LI>
+  <LI><A 
+  href="http://www.xianguo.com/subscribe.php?url=http%3A%2F%2Fwww.matrix67.com%2Fblog" 
+  target=_blank>鲜果</A> </LI>
+  <LI><A href="http://sofa.souyo.com/add?f=http://www.matrix67.com/blog/" 
+  target=_blank>沙发</A> </LI>
+  <LI><A href="http://www.live.com/?add=http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>Live</A> </LI>
+  <LI><A 
+  href="http://www.google.com/ig/add?feedurl=http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>Google</A> </LI>
+  <LI><A 
+  href="http://www.netvibes.com/subscribe.php?type=rss&amp;url=http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>Netvibes</A> </LI>
+  <LI><A 
+  href="http://www.bloglines.com/sub/http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>Bloglines</A></LI></UL></DIV></DIV>
+<DIV class=sideblock>
+<H3>Control Panel</H3>
+<UL>
+  <LI><A href="http://www.matrix67.com/blog/wp-login.php">登录</A> </LI>
+  <LI><A title="使用 RSS 2.0 同步此内容" 
+  href="http://www.matrix67.com/blog/feed.asp">文章 <ABBR 
+  title="Really Simple Syndication">RSS</ABBR></A> </LI>
+  <LI><A title="RSS 上的最近评论" 
+  href="http://www.matrix67.com/blog/comments/feed"><ABBR 
+  title="Really Simple Syndication">RSS</ABBR> 评论</A> </LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Random Articles</H3>
+<UL>
+  <LI><A title="特别感谢：&#13;&#10;dd大牛 http://cuitianyi.com...  5.04.2008" 
+  href="http://www.matrix67.com/blog/links" rel=bookmark>Links</A></LI>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;SETI@home可以在杂䮮.  12.01.2008" 
+  href="http://www.matrix67.com/blog/archives/415" 
+  rel=bookmark>趣题：经典二分问题的一个扩展</A></LI>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;前几年有一段时鮮.  4.08.2006" 
+  href="http://www.matrix67.com/blog/archives/101" rel=bookmark>美剧扫盲帖</A></LI>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;今天看到一本巨箮.  28.08.2009" 
+  href="http://www.matrix67.com/blog/archives/2256" 
+  rel=bookmark>经典证明：一组凸集中任三个的交非空，则所有凸集的交非空</A></LI>
+  <LI><A title="你或许还记得爱的方程式是什么。䮮.  9.06.2007" 
+  href="http://www.matrix67.com/blog/archives/223" 
+  rel=bookmark>爱的方程式（加强版）</A></LI>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;我们之前已经见议.  1.12.2008" 
+  href="http://www.matrix67.com/blog/archives/1089" 
+  rel=bookmark>趣题：用正则表达式判断一个二进制数是否能被3整除</A></LI>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;AppJet是一个免费箮.  14.12.2007" 
+  href="http://www.matrix67.com/blog/archives/383" 
+  rel=bookmark>AppJet：编写并发布你的网络应用程序</A></LI>
+  <LI><A title="古代汉语我是100%的挂了，整张卷子...  11.01.2008" 
+  href="http://www.matrix67.com/blog/archives/414" 
+rel=bookmark>终于考完了……</A></LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Recent Comments</H3>
+<UL id=recentcomments>
+  <LI class=recentcomments>beyondcom 在 <A 
+  href="http://www.matrix67.com/blog/archives/2700/comment-page-1#comment-191997">经典证明：用信息熵证明素数无穷多</A> 
+  上的评论</LI>
+  <LI class=recentcomments><A class=url href="http://mgccl.com/" 
+  rel="external nofollow">Mgccl</A> 在 <A 
+  href="http://www.matrix67.com/blog/archives/2700/comment-page-1#comment-191993">经典证明：用信息熵证明素数无穷多</A> 
+  上的评论</LI>
+  <LI class=recentcomments>crazylamb 在 <A 
+  href="http://www.matrix67.com/blog/archives/2700/comment-page-1#comment-191985">经典证明：用信息熵证明素数无穷多</A> 
+  上的评论</LI>
+  <LI class=recentcomments>tonyfels 在 <A 
+  href="http://www.matrix67.com/blog/archives/2700/comment-page-1#comment-191978">经典证明：用信息熵证明素数无穷多</A> 
+  上的评论</LI>
+  <LI class=recentcomments><A class=url 
+  href="http://www.matrix67.com/blog/archives/2700" 
+  rel="external nofollow">Matrix67: My Blog » Blog Archive » 
+  经典证明：用信息熵证明素数无穷多</A> 在 <A 
+  href="http://www.matrix67.com/blog/archives/1678/comment-page-1#comment-191976">经典证明：素数无穷多的拓扑学证明</A> 
+  上的评论</LI>
+  <LI class=recentcomments><A class=url 
+  href="http://www.matrix67.com/blog/archives/2700" 
+  rel="external nofollow">Matrix67: My Blog » Blog Archive » 
+  经典证明：用信息熵证明素数无穷多</A> 在 <A 
+  href="http://www.matrix67.com/blog/archives/539/comment-page-1#comment-191974">经典证明：质数无穷多与两个更强的命题</A> 
+  上的评论</LI>
+  <LI class=recentcomments><A class=url 
+  href="http://www.matrix67.com/blog/archives/2700" 
+  rel="external nofollow">Matrix67: My Blog » Blog Archive » 
+  经典证明：用信息熵证明素数无穷多</A> 在 <A 
+  href="http://www.matrix67.com/blog/archives/282/comment-page-1#comment-191973">另外两种证明素数无穷多的方法</A> 
+  上的评论</LI>
+  <LI class=recentcomments>SixSheep 在 <A 
+  href="http://www.matrix67.com/blog/archives/2691/comment-page-1#comment-191970">Geek的收藏：印满圆周率的纸钱包</A> 
+  上的评论</LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Search</H3>
+<FORM id=searchform action=http://www.matrix67.com/blog method=get>
+<DIV><INPUT id=s size=15 name=s> <INPUT type=submit value=搜索> 
+</DIV></FORM></DIV>
+<DIV class=sideblock>
+<H3>Blogroll</H3>
+<UL class="xoxo blogroll">
+  <LI><A href="http://blog.youxu.info/" target=_blank>4G Spaces</A> </LI>
+  <LI><A href="http://aifreedom.com/" target=_blank>Ai.Freedom</A> </LI>
+  <LI><A href="http://asukanokaze.blogbus.com/" target=_blank 
+  rel="friend met">AsukaNoKaze</A> </LI>
+  <LI><A href="http://www.eaglefantasy.cn/" target=_blank>EagleFantasy</A> </LI>
+  <LI><A href="http://mindhacks.cn/" target=_blank>MindHacks</A> </LI>
+  <LI><A href="http://cuitianyi.com/blog/" target=_blank rel=friend>Tianyi</A> 
+  </LI>
+  <LI><A href="http://yueweitang.org/blog/" target=_blank>Zhiqiang</A> 
+</LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Support</H3>
+<DIV class=textwidget>
+<P><A href="http://validator.w3.org/check/referer" target=_blank><IMG 
+alt="XHTML 1.0 Transitional" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/xhtml.png" 
+border=0></A> <A href="http://jigsaw.w3.org/css-validator/validator-uri.html" 
+target=_blank><IMG alt="Css Validator" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/css.gif" 
+border=0></A> <A href="http://www.matrix67.com/blog/archives/feed.asp" 
+target=_blank><IMG alt="RSS 2.0" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/rss2.png" 
+border=0></A> <A href="http://www.matrix67.com/blog/archives/atom.asp" 
+target=_blank><IMG alt="Atom 1.0" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/atom.png" 
+border=0></A> <A href="http://www.mozilla.org/products/firefox/" 
+target=_blank><IMG alt="Get firefox" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/firefox.gif" 
+border=0></A> <A href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" 
+target=_blank><IMG alt="Creative Commons" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/cc.png" 
+border=0></A> <A href="msnim:chat?contact=matrix67@tom.com" target=_blank><IMG 
+alt=MSN 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/msnicon.gif" 
+border=0></A> <A href="mailto:gs.matrix67@gmail.com" target=_blank><IMG 
+alt=GmailMe 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/gmailme.gif" 
+border=0></A> <A 
+href="http://wpa.qq.com/msgrd?V=1&amp;Uin=188932899&amp;Site=www.matrix67.com&amp;Menu=yes" 
+target=_blank><IMG alt=QQ 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/QQ.gif" 
+border=0></A> <A href="http://del.icio.us/matrix67" target=_blank><IMG 
+alt="My del.icio.us" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/my-del.icio.us.gif" 
+border=0></A> <A href="http://www.imdb.com/mymovies/list?l=19073540" 
+target=_blank><IMG alt=imdb 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/imdb.png" 
+border=0></A> <A href="http://www.last.fm/user/matrix67" target=_blank><IMG 
+alt=Last.fm 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/lastfm.gif" 
+border=0></A></P>
+<P>
+<SCRIPT type=text/javascript><!--
+google_ad_client = "pub-8918918108662869";
+google_ad_slot = "8802076064";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</SCRIPT>
+
+<SCRIPT 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/show_ads.js" 
+type=text/javascript>
+</SCRIPT>
+</P><BR></DIV></DIV></DIV></DIV></DIV>
+<DIV id=footer>
+<P>Powered by <A href="http://wordpress.org/" target=_blank>WordPress</A>. Theme 
+by <A href="http://www.smartertemplates.com/" target=_blank>Smarter 
+Templates</A> &amp; <A href="http://webhostinggeeks.com/" target=_blank>Web 
+Hosting Geeks</A>, Revised by <A 
+href="http://www.matrix67.com/">Matrix67.com</A><BR><A title="使用 RSS 同步" 
+href="http://www.matrix67.com/blog/feed.asp">Entries <ABBR 
+title="Really Simple Syndication">RSS</ABBR></A> | <A title="RSS 上的最近评论" 
+href="http://www.matrix67.com/blog/comments/feed">Comments <ABBR 
+title="Really Simple Syndication">RSS</ABBR></A></P></DIV></DIV>
+<SCRIPT language=javascript type=text/javascript>
+//<![CDATA[
+function listExpand(list)
+{
+   list.style.height="auto";
+   list.style.overflow="visible";
+   list.style.backgroundColor="#404449";
+}
+function listContract(list)
+{
+   list.style.height="16px";
+   list.style.overflow="hidden";
+   list.style.backgroundColor="#2C2F33";
+}
+var els = document.getElementsByTagName("li");
+for (var i = 0; i < els.length; i++)
+{
+   if (els[i].parentNode.parentNode.className=="sideblock"
+      || els[i].parentNode.parentNode.className=="textwidget")
+   { 
+     els[i].onmouseover = function(){listExpand(this)};
+     els[i].onmouseout = function(){listContract(this)};
+   }
+}
+  //]]>
+</SCRIPT>
+
+<DIV style="DISPLAY: none">
+<SCRIPT language=JavaScript 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/stat.htm" 
+type=text/javascript charset=gb2312>
+</SCRIPT>
+</DIV>
+<SCRIPT 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（四）：实战篇.files/urchin.js" 
+type=text/javascript>
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+_uacct = "UA-1093817-1";
+urchinTracker();
+</SCRIPT>
+<!-- Dynamic Page Served (once) in 0.924 seconds --><!-- Cached page generated by WP-Super-Cache on 2010-01-06 14:04:46 --><!-- super cache --></BODY></HTML>

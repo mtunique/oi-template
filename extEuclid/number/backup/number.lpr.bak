@@ -1,0 +1,115 @@
+program number;
+
+const
+  maxn = 20;
+var
+  c, cc: array[0..maxn] of longint;
+  a: array[0..1200, 0..1200] of longint;
+  temp: int64;
+
+  function gys(x, y: int64): int64;
+  begin
+    if y = 0 then
+      gys := x
+    else
+    begin
+      temp := int64(x) mod y;
+      if temp < 0 then
+        temp := int64(temp) + y;
+      gys := gys(y, temp);
+    end;
+  end;
+
+{Function gbs(a,b:int64):int64;
+begin
+      If a<b then swap(a,b);
+      gbs:=a;
+      While gbs mod b>0 do inc(gbs,a);
+End; }
+
+  function lcd(a, b: int64): int64;
+  var
+    box: int64;
+  begin
+    if a > b then
+    begin
+      box := b;
+      b := a;
+      a := box;
+    end;
+    temp := gys(a, b);
+    exit(int64(b) div temp * a);
+  end;
+
+  procedure print(x: int64);
+  begin
+    writeln(x);
+    Close(input);
+    Close(output);
+    halt;
+  end;
+
+  procedure init;
+  var
+    n, i, x, j, y: longint;
+    f: boolean;
+    max, pos, aaa, bbb: int64;
+  begin
+    readln(n);
+    for i := 1 to n do
+    begin
+      Read(x, y);
+      c[i] := x;
+      cc[i] := y;
+      Inc(a[y, 0]);
+      a[y, a[y, 0]] := x;
+    end;
+    max := 0;
+    for i := 1 to 1000 do
+      if a[i, 0] > 2 then
+      begin
+        temp := a[i, 1];
+        for j := 2 to a[i, 0] do
+          temp := lcd(temp, a[i, j]);
+        if temp >= max then
+        begin
+          max := temp;
+          pos := i;
+        end;
+      end;
+    temp := max;
+    while temp > 0 do
+    begin
+      aaa := int64(temp) + pos;
+      if aaa < 0 then
+        break;
+      f := True;
+      for i := n downto 1 do
+      begin
+        bbb := int64(aaa) mod c[i];
+        if bbb < 0 then
+          bbb := int64(bbb) + c[i];
+        if bbb <> cc[i] then
+        begin
+          f := False;
+          break;
+        end;
+      end;
+      if f then
+        print(aaa);
+      temp := int64(temp) + max;
+    end;
+    print(-1);
+  end;
+
+begin
+  Assign(input, 'number.in');
+  Assign(output, 'number.out');
+  reset(input);
+  rewrite(output);
+
+  init;
+
+  Close(input);
+  Close(output);
+end.

@@ -1,0 +1,1 @@
+mtunique's algorithm templates

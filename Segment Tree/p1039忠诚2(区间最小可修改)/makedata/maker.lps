@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="5"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="maker.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="maker"/>
+        <CursorPos X="40" Y="8"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <General>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <JumpHistory Count="0" HistoryIndex="-1"/>
+  </ProjectSession>
+</CONFIG>

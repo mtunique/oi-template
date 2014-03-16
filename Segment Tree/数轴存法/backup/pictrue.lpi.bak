@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="5"/>
+    <General>
+      <Flags>
+        <MainUnitHasUsesSectionForAllUnits Value="False"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <IconPath Value="./"/>
+      <TargetFileExt Value=".exe"/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="picture.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="picture"/>
+        <CursorPos X="34" Y="38"/>
+        <TopLine Value="32"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="picture.pas"/>
+        <Caret Line="41" Column="1" TopLine="26"/>
+      </Position1>
+      <Position2>
+        <Filename Value="picture.pas"/>
+        <Caret Line="42" Column="1" TopLine="27"/>
+      </Position2>
+      <Position3>
+        <Filename Value="picture.pas"/>
+        <Caret Line="41" Column="1" TopLine="26"/>
+      </Position3>
+      <Position4>
+        <Filename Value="picture.pas"/>
+        <Caret Line="33" Column="1" TopLine="18"/>
+      </Position4>
+      <Position5>
+        <Filename Value="picture.pas"/>
+        <Caret Line="40" Column="1" TopLine="25"/>
+      </Position5>
+      <Position6>
+        <Filename Value="picture.pas"/>
+        <Caret Line="41" Column="1" TopLine="26"/>
+      </Position6>
+      <Position7>
+        <Filename Value="picture.pas"/>
+        <Caret Line="33" Column="1" TopLine="18"/>
+      </Position7>
+      <Position8>
+        <Filename Value="picture.pas"/>
+        <Caret Line="40" Column="1" TopLine="25"/>
+      </Position8>
+      <Position9>
+        <Filename Value="picture.pas"/>
+        <Caret Line="41" Column="1" TopLine="26"/>
+      </Position9>
+      <Position10>
+        <Filename Value="picture.pas"/>
+        <Caret Line="42" Column="1" TopLine="27"/>
+      </Position10>
+      <Position11>
+        <Filename Value="picture.pas"/>
+        <Caret Line="48" Column="1" TopLine="33"/>
+      </Position11>
+      <Position12>
+        <Filename Value="picture.pas"/>
+        <Caret Line="42" Column="1" TopLine="27"/>
+      </Position12>
+      <Position13>
+        <Filename Value="picture.pas"/>
+        <Caret Line="33" Column="1" TopLine="18"/>
+      </Position13>
+      <Position14>
+        <Filename Value="picture.pas"/>
+        <Caret Line="40" Column="1" TopLine="25"/>
+      </Position14>
+      <Position15>
+        <Filename Value="picture.pas"/>
+        <Caret Line="41" Column="1" TopLine="26"/>
+      </Position15>
+      <Position16>
+        <Filename Value="picture.pas"/>
+        <Caret Line="33" Column="1" TopLine="18"/>
+      </Position16>
+      <Position17>
+        <Filename Value="picture.pas"/>
+        <Caret Line="40" Column="1" TopLine="25"/>
+      </Position17>
+      <Position18>
+        <Filename Value="picture.pas"/>
+        <Caret Line="41" Column="1" TopLine="26"/>
+      </Position18>
+      <Position19>
+        <Filename Value="picture.pas"/>
+        <Caret Line="42" Column="1" TopLine="27"/>
+      </Position19>
+      <Position20>
+        <Filename Value="picture.pas"/>
+        <Caret Line="48" Column="1" TopLine="33"/>
+      </Position20>
+      <Position21>
+        <Filename Value="picture.pas"/>
+        <Caret Line="42" Column="1" TopLine="27"/>
+      </Position21>
+      <Position22>
+        <Filename Value="picture.pas"/>
+        <Caret Line="33" Column="1" TopLine="18"/>
+      </Position22>
+      <Position23>
+        <Filename Value="picture.pas"/>
+        <Caret Line="40" Column="1" TopLine="25"/>
+      </Position23>
+      <Position24>
+        <Filename Value="picture.pas"/>
+        <Caret Line="41" Column="1" TopLine="26"/>
+      </Position24>
+      <Position25>
+        <Filename Value="picture.pas"/>
+        <Caret Line="33" Column="1" TopLine="18"/>
+      </Position25>
+      <Position26>
+        <Filename Value="picture.pas"/>
+        <Caret Line="40" Column="1" TopLine="25"/>
+      </Position26>
+      <Position27>
+        <Filename Value="picture.pas"/>
+        <Caret Line="41" Column="1" TopLine="26"/>
+      </Position27>
+      <Position28>
+        <Filename Value="picture.pas"/>
+        <Caret Line="33" Column="1" TopLine="18"/>
+      </Position28>
+      <Position29>
+        <Filename Value="picture.pas"/>
+        <Caret Line="40" Column="1" TopLine="25"/>
+      </Position29>
+      <Position30>
+        <Filename Value="picture.pas"/>
+        <Caret Line="62" Column="34" TopLine="44"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="5"/>
+    <PathDelim Value="\"/>
+    <CodeGeneration>
+      <Generate Value="Faster"/>
+    </CodeGeneration>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Watches Count="10">
+      <Item1>
+        <Expression Value="old"/>
+      </Item1>
+      <Item2>
+        <Expression Value="q.len[1]"/>
+      </Item2>
+      <Item3>
+        <Expression Value="m3"/>
+      </Item3>
+      <Item4>
+        <Expression Value="m4"/>
+      </Item4>
+      <Item5>
+        <Expression Value="l"/>
+      </Item5>
+      <Item6>
+        <Expression Value="mid"/>
+      </Item6>
+      <Item7>
+        <Expression Value="r"/>
+      </Item7>
+      <Item8>
+        <Expression Value="lr"/>
+      </Item8>
+      <Item9>
+        <Expression Value="rr"/>
+      </Item9>
+      <Item10>
+        <Expression Value="l+r"/>
+      </Item10>
+    </Watches>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

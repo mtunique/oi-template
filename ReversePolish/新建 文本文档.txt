@@ -1,0 +1,2 @@
+op_set:set of char=[‘+’,‘-’,‘*’,‘/’];{运算符集合}
+letter:set of char=[‘A’..‘Z’];{运算数集合}

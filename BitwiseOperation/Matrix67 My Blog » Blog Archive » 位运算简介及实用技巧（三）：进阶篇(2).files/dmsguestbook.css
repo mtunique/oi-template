@@ -1,0 +1,114 @@
+.css_guestbook_position {
+	LEFT: 0px; POSITION: relative; TOP: 0px
+}
+.css_guestbook_font_color {
+	COLOR: #000000
+}
+.css_form_text {
+	FONT-WEIGHT: normal
+}
+.css_form_namefield {
+	BORDER-RIGHT: #dedede 1px solid; BORDER-TOP: #dedede 1px solid; BORDER-LEFT: #dedede 1px solid; WIDTH: 150px; COLOR: #000000; BORDER-BOTTOM: #dedede 1px solid
+}
+.css_form_emailfield {
+	BORDER-RIGHT: #dedede 1px solid; BORDER-TOP: #dedede 1px solid; BORDER-LEFT: #dedede 1px solid; WIDTH: 150px; COLOR: #000000; BORDER-BOTTOM: #dedede 1px solid
+}
+.css_form_urlfield {
+	BORDER-RIGHT: #dedede 1px solid; BORDER-TOP: #dedede 1px solid; BORDER-LEFT: #dedede 1px solid; WIDTH: 150px; COLOR: #000000; BORDER-BOTTOM: #dedede 1px solid
+}
+.css_form_textfieldspace {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 5px; TEXT-ALIGN: left
+}
+.css_form_messagefield {
+	BORDER-RIGHT: #dedede 1px solid; BORDER-TOP: #dedede 1px solid; BORDER-LEFT: #dedede 1px solid; WIDTH: 80%; COLOR: #000000; BORDER-BOTTOM: #dedede 1px solid; HEIGHT: 150px
+}
+.css_form_antispamtext {
+	TEXT-ALIGN: center
+}
+.css_form_antispamcontent {
+	BORDER-RIGHT: #dedede 1px solid; BORDER-TOP: #dedede 1px solid; BORDER-LEFT: #dedede 1px solid; BORDER-BOTTOM: #dedede 1px solid
+}
+.css_form_antispamcontent_position {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; MARGIN: 0px; PADDING-TOP: 5px; TEXT-ALIGN: center
+}
+.css_form_antispam_inputfield {
+	BORDER-RIGHT: #dedede 1px solid; BORDER-TOP: #dedede 1px solid; BORDER-LEFT: #dedede 1px solid; WIDTH: 60px; COLOR: #000000; BORDER-BOTTOM: #dedede 1px solid
+}
+.css_form_submit {
+	COLOR: #000000
+}
+.css_form_submit_position {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; PADDING-TOP: 20px; TEXT-ALIGN: center
+}
+.css_form_errormessage {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #bb0000; TEXT-DECORATION: none
+}
+.css_form_successmessage {
+	FONT-WEIGHT: bold; FONT-SIZE: 11px; COLOR: #00bb00; TEXT-DECORATION: none
+}
+.css_form_link {
+	FONT-SIZE: 11px; LEFT: 0px; POSITION: relative; TOP: 0px
+}
+.css_navigation_totalcount {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; FONT-SIZE: 11px; LEFT: 0px; PADDING-BOTTOM: 5px; WIDTH: 95%; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+.css_navigation_overview {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; LEFT: 0px; PADDING-BOTTOM: 15px; WIDTH: 95%; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+.css_navigation_select {
+	COLOR: #bb1100; TEXT-DECORATION: none
+}
+.css_navigation_notselect {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.css_navigation_char {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #000000; TEXT-DECORATION: none
+}
+.css_navigation_char_position {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 10px; LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 20px; WIDTH: 95%; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+.css_post_header1 {
+	FONT-SIZE: 11px; HEIGHT: 15px
+}
+.css_post_header2 {
+	WIDTH: 20px; HEIGHT: 15px
+}
+.css_post_header3 {
+	WIDTH: 20px; HEIGHT: 15px
+}
+.css_post_header4 {
+	FONT-SIZE: 11px; HEIGHT: 15px
+}
+.css_post_email_image {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 15px; HEIGHT: 15px; BORDER-RIGHT-WIDTH: 0px
+}
+.css_post_url_image {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 15px; HEIGHT: 15px; BORDER-RIGHT-WIDTH: 0px
+}
+.css_post_separator {
+	BORDER-RIGHT: #eeeeee 1px solid; BORDER-TOP: #eeeeee 1px solid; MARGIN: 0px; BORDER-LEFT: #eeeeee 1px solid; WIDTH: 35%; BORDER-BOTTOM: #eeeeee 1px solid; HEIGHT: 1px; TEXT-ALIGN: left
+}
+.css_post_message {
+	FONT-SIZE: 11px; MARGIN: 5px 0px 0px
+}
+.css_form_embedded {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #aaaaaa 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #aaaaaa 1px solid; WIDTH: 95%; LINE-HEIGHT: 1.4em; PADDING-TOP: 0px; BORDER-BOTTOM: #aaaaaa 1px solid; TEXT-ALIGN: left
+}
+.css_post_embedded {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #aaaaaa 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 12px; PADDING-BOTTOM: 10px; MARGIN: 0px; BORDER-LEFT: #aaaaaa 1px solid; WIDTH: 95%; LINE-HEIGHT: 1.4em; PADDING-TOP: 10px; BORDER-BOTTOM: #aaaaaa 1px solid; TEXT-ALIGN: left
+}
+A.css_navigation_char:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.css_navigation_select:hover {
+	COLOR: #bb1100; TEXT-DECORATION: none
+}
+A.css_navigation_notselect:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+IMG.css_post_url_image {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+IMG.css_post_email_image {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}

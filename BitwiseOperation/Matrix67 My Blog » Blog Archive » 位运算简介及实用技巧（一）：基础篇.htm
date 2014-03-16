@@ -1,0 +1,1093 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0041)http://www.matrix67.com/blog/archives/263 -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD 
+profile=http://gmpg.org/xfn/11><TITLE>Matrix67: My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META content="MSHTML 6.00.2900.5512" name=GENERATOR><!-- leave this for stats --><LINK 
+href="http://www.matrix67.com/favicon.ico" type=image/x-icon rel=icon><LINK 
+href="http://www.matrix67.com/favicon.ico" type=image/x-icon 
+rel="shortcut icon"><LINK media=screen 
+href="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/style.css" 
+type=text/css rel=stylesheet><!--[if lt ie 7]><LINK media=screen 
+href="http://www.matrix67.com/blog/wp-content/themes/CoolMist/ie-win.css" 
+type=text/css rel=stylesheet><![endif]--><LINK title="RSS 2.0" 
+href="http://www.matrix67.com/blog/feed.asp" type=application/rss+xml 
+rel=alternate><LINK title="RSS .92" href="http://www.matrix67.com/blog/feed/rss" 
+type=text/xml rel=alternate><LINK title="Atom 0.3" 
+href="http://www.matrix67.com/blog/feed/atom" type=application/atom+xml 
+rel=alternate><LINK href="http://www.matrix67.com/blog/xmlrpc.php" 
+rel=pingback><LINK title=2010年一月 
+href="http://www.matrix67.com/blog/archives/date/2010/01" rel=archives><LINK 
+title=2009年十二月 href="http://www.matrix67.com/blog/archives/date/2009/12" 
+rel=archives><LINK title=2009年十一月 
+href="http://www.matrix67.com/blog/archives/date/2009/11" rel=archives><LINK 
+title=2009年十月 href="http://www.matrix67.com/blog/archives/date/2009/10" 
+rel=archives><LINK title=2009年九月 
+href="http://www.matrix67.com/blog/archives/date/2009/09" rel=archives><LINK 
+title=2009年八月 href="http://www.matrix67.com/blog/archives/date/2009/08" 
+rel=archives><LINK title=2009年七月 
+href="http://www.matrix67.com/blog/archives/date/2009/07" rel=archives><LINK 
+title=2009年六月 href="http://www.matrix67.com/blog/archives/date/2009/06" 
+rel=archives><LINK title=2009年五月 
+href="http://www.matrix67.com/blog/archives/date/2009/05" rel=archives><LINK 
+title=2009年四月 href="http://www.matrix67.com/blog/archives/date/2009/04" 
+rel=archives><LINK title=2009年三月 
+href="http://www.matrix67.com/blog/archives/date/2009/03" rel=archives><LINK 
+title=2009年二月 href="http://www.matrix67.com/blog/archives/date/2009/02" 
+rel=archives><LINK title=2009年一月 
+href="http://www.matrix67.com/blog/archives/date/2009/01" rel=archives><LINK 
+title=2008年十二月 href="http://www.matrix67.com/blog/archives/date/2008/12" 
+rel=archives><LINK title=2008年十一月 
+href="http://www.matrix67.com/blog/archives/date/2008/11" rel=archives><LINK 
+title=2008年十月 href="http://www.matrix67.com/blog/archives/date/2008/10" 
+rel=archives><LINK title=2008年九月 
+href="http://www.matrix67.com/blog/archives/date/2008/09" rel=archives><LINK 
+title=2008年八月 href="http://www.matrix67.com/blog/archives/date/2008/08" 
+rel=archives><LINK title=2008年七月 
+href="http://www.matrix67.com/blog/archives/date/2008/07" rel=archives><LINK 
+title=2008年六月 href="http://www.matrix67.com/blog/archives/date/2008/06" 
+rel=archives><LINK title=2008年五月 
+href="http://www.matrix67.com/blog/archives/date/2008/05" rel=archives><LINK 
+title=2008年四月 href="http://www.matrix67.com/blog/archives/date/2008/04" 
+rel=archives><LINK title=2008年三月 
+href="http://www.matrix67.com/blog/archives/date/2008/03" rel=archives><LINK 
+title=2008年二月 href="http://www.matrix67.com/blog/archives/date/2008/02" 
+rel=archives><LINK title=2008年一月 
+href="http://www.matrix67.com/blog/archives/date/2008/01" rel=archives><LINK 
+title=2007年十二月 href="http://www.matrix67.com/blog/archives/date/2007/12" 
+rel=archives><LINK title=2007年十一月 
+href="http://www.matrix67.com/blog/archives/date/2007/11" rel=archives><LINK 
+title=2007年十月 href="http://www.matrix67.com/blog/archives/date/2007/10" 
+rel=archives><LINK title=2007年九月 
+href="http://www.matrix67.com/blog/archives/date/2007/09" rel=archives><LINK 
+title=2007年八月 href="http://www.matrix67.com/blog/archives/date/2007/08" 
+rel=archives><LINK title=2007年七月 
+href="http://www.matrix67.com/blog/archives/date/2007/07" rel=archives><LINK 
+title=2007年六月 href="http://www.matrix67.com/blog/archives/date/2007/06" 
+rel=archives><LINK title=2007年五月 
+href="http://www.matrix67.com/blog/archives/date/2007/05" rel=archives><LINK 
+title=2007年四月 href="http://www.matrix67.com/blog/archives/date/2007/04" 
+rel=archives><LINK title=2007年三月 
+href="http://www.matrix67.com/blog/archives/date/2007/03" rel=archives><LINK 
+title=2007年二月 href="http://www.matrix67.com/blog/archives/date/2007/02" 
+rel=archives><LINK title=2007年一月 
+href="http://www.matrix67.com/blog/archives/date/2007/01" rel=archives><LINK 
+title=2006年十二月 href="http://www.matrix67.com/blog/archives/date/2006/12" 
+rel=archives><LINK title=2006年十一月 
+href="http://www.matrix67.com/blog/archives/date/2006/11" rel=archives><LINK 
+title=2006年十月 href="http://www.matrix67.com/blog/archives/date/2006/10" 
+rel=archives><LINK title=2006年九月 
+href="http://www.matrix67.com/blog/archives/date/2006/09" rel=archives><LINK 
+title=2006年八月 href="http://www.matrix67.com/blog/archives/date/2006/08" 
+rel=archives><LINK title=2006年七月 
+href="http://www.matrix67.com/blog/archives/date/2006/07" rel=archives><LINK 
+title=2006年六月 href="http://www.matrix67.com/blog/archives/date/2006/06" 
+rel=archives><LINK title=2006年五月 
+href="http://www.matrix67.com/blog/archives/date/2006/05" rel=archives><LINK 
+title=2006年四月 href="http://www.matrix67.com/blog/archives/date/2006/04" 
+rel=archives><LINK title=2006年三月 
+href="http://www.matrix67.com/blog/archives/date/2006/03" rel=archives><LINK 
+title=2006年二月 href="http://www.matrix67.com/blog/archives/date/2006/02" 
+rel=archives><LINK title=2006年一月 
+href="http://www.matrix67.com/blog/archives/date/2006/01" rel=archives><LINK 
+title=2005年十二月 href="http://www.matrix67.com/blog/archives/date/2005/12" 
+rel=archives><LINK title=2005年十一月 
+href="http://www.matrix67.com/blog/archives/date/2005/11" rel=archives><LINK 
+title=2005年十月 href="http://www.matrix67.com/blog/archives/date/2005/10" 
+rel=archives><LINK title=2005年九月 
+href="http://www.matrix67.com/blog/archives/date/2005/09" rel=archives><LINK 
+title=2005年八月 href="http://www.matrix67.com/blog/archives/date/2005/08" 
+rel=archives><LINK title=2005年七月 
+href="http://www.matrix67.com/blog/archives/date/2005/07" rel=archives><LINK 
+title=RSD href="http://www.matrix67.com/blog/xmlrpc.php?rsd" 
+type=application/rsd+xml rel=EditURI><LINK 
+href="http://www.matrix67.com/blog/wp-includes/wlwmanifest.xml" 
+type=application/wlwmanifest+xml rel=wlwmanifest>
+<META content="WordPress 2.7" name=generator>
+<META content=1.13.0 name=DMSGuestbook><LINK media=screen 
+href="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/dmsguestbook.css" 
+type=text/css rel=stylesheet>
+<STYLE type=text/css>.recentcomments A {
+	PADDING-RIGHT: 0px! important; DISPLAY: inline! important; PADDING-LEFT: 0px! important; PADDING-BOTTOM: 0px! important; MARGIN: 0px; PADDING-TOP: 0px! important
+}
+</STYLE>
+</HEAD>
+<BODY>
+<DIV id=navigation>
+<UL>
+  <LI class=page_item><A href="http://www.matrix67.com/blog">Home</A> </LI>
+  <LI class="page_item page-item-5"><A title=TagsCloud 
+  href="http://www.matrix67.com/blog/tagscloud">TagsCloud</A> </LI>
+  <LI class="page_item page-item-485"><A title=Links 
+  href="http://www.matrix67.com/blog/links">Links</A> </LI>
+  <LI class="page_item page-item-2"><A title=AboutMe 
+  href="http://www.matrix67.com/blog/about">AboutMe</A> </LI>
+  <LI class="page_item page-item-2016"><A title=FAQ 
+  href="http://www.matrix67.com/blog/faq">FAQ</A> </LI>
+  <LI class="page_item page-item-547"><A title=GuestBook 
+  href="http://www.matrix67.com/blog/guestbook">GuestBook</A> </LI></UL></DIV>
+<DIV id=wrapper2>
+<DIV id=wrapper>
+<DIV id=content-wrapper>
+<DIV id=content>
+<DIV class=post-wrapper>
+<DIV 
+style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 6px; MARGIN: 0px; WIDTH: 710px; PADDING-TOP: 0px; BORDER-BOTTOM: #4f5255 1px dotted"><SPAN 
+class=titles><A title="Permanent Link to 位运算简介及实用技巧（一）：基础篇" 
+href="http://www.matrix67.com/blog/archives/263" 
+rel=bookmark>位运算简介及实用技巧（一）：基础篇</A></SPAN> 
+<DIV><IMG style="MARGIN-BOTTOM: -3px" alt=icon2 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/icon2.gif"> <A 
+title="查看 Program Impossible 的全部文章" 
+href="http://www.matrix67.com/blog/archives/category/program-impossible" 
+rel="category tag">Program Impossible</A> | <IMG style="MARGIN-BOTTOM: -3px" 
+alt=icon4 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/icon4.gif"> 
+2007-07-23 4:39| <IMG style="MARGIN-BOTTOM: -3px" alt=icon3 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/icon3.gif">55 
+Comments | 本文内容遵从<A 
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" 
+target=_blank>CC版权协议</A> 转载请注明出自matrix67.com</DIV></DIV>
+<DIV class=post>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;去年年底写的关于<A 
+href="http://www.matrix67.com/blog/article.asp?id=153" 
+target=_blank>位运算</A>的日志是这个Blog里少数大受欢迎的文章之一，很多人都希望我能不断完善那篇文章。后来我看到了不少其它的资料，学习到了更多关于位运算的知识，有了重新整理位运算技巧的想法。从今天起我就开始写这一系列位运算讲解文章，与其说是原来那篇文章的follow-up，不如说是一个remake。当然首先我还是从最基础的东西说起。<BR><BR><STRONG>什么是位运算？</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;程序中的所有数在计算机内存中都是以二进制的形式储存的。位运算说穿了，就是直接对整数在内存中的二进制位进行操作。比如，and运算本来是一个逻辑运算符，但整数与整数之间也可以进行and运算。举个例子，6的二进制是110，11的二进制是1011，那么6 
+and 11的结果就是2，它是二进制对应位进行逻辑运算的结果（0表示False，1表示True，空位都当0处理）：<BR><SPAN 
+style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp; 110<BR>AND 
+1011<BR>----------<BR>&nbsp;&nbsp;&nbsp;&nbsp;0010&nbsp;&nbsp;--&gt;&nbsp;&nbsp;2</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;由于位运算直接对内存数据进行操作，不需要转成十进制，因此处理速度非常快。当然有人会说，这个快了有什么用，计算6 
+and 
+11没有什么实际意义啊。这一系列的文章就将告诉你，位运算到底可以干什么，有些什么经典应用，以及如何用位运算优化你的程序。<BR><BR><BR><STRONG>Pascal和C中的位运算符号</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;下面的a和b都是整数类型，则：<BR><SPAN 
+style="FONT-FAMILY: 宋体">C语言&nbsp;&nbsp;|&nbsp;&nbsp;Pascal语言<BR>-------+-------------<BR>a 
+&amp; b&nbsp;&nbsp;|&nbsp;&nbsp;a and b<BR>a | b&nbsp;&nbsp;|&nbsp;&nbsp;a or 
+b<BR>a ^ b&nbsp;&nbsp;|&nbsp;&nbsp;a xor b<BR>&nbsp;&nbsp;~a&nbsp;&nbsp; 
+|&nbsp;&nbsp; not a<BR>a &lt;&lt; b |&nbsp;&nbsp;a shl b<BR>a &gt;&gt; b 
+|&nbsp;&nbsp;a shr 
+b</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;注意C中的逻辑运算和位运算符号是不同的。520|1314=1834，但520||1314=1，因为逻辑运算时520和1314都相当于True。同样的，!a和~a也是有区别的。<BR><BR><BR><STRONG>各种位运算的使用</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;=== 
+1. and运算 ===<BR>&nbsp;&nbsp;&nbsp;&nbsp;and运算通常用于二进制取位操作，例如一个数 and 
+1的结果就是取二进制的最末位。这可以用来判断一个整数的奇偶，二进制的最末位为0表示该数为偶数，最末位为1表示该数为奇数.<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;=== 
+2. or运算 ===<BR>&nbsp;&nbsp;&nbsp;&nbsp;or运算通常用于二进制特定位上的无条件赋值，例如一个数or 
+1的结果就是把二进制最末位强行变成1。如果需要把二进制最末位变成0，对这个数or 
+1之后再减一就可以了，其实际意义就是把这个数强行变成最接近的偶数。<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;=== 3. xor运算 
+===<BR>&nbsp;&nbsp;&nbsp;&nbsp;xor运算通常用于对二进制的特定一位进行取反操作，因为异或可以这样定义：0和1异或0都不变，异或1则取反。<BR>&nbsp;&nbsp;&nbsp;&nbsp;xor运算的逆运算是它本身，也就是说两次异或同一个数最后结果不变，即(a 
+xor b) xor b = 
+a。xor运算可以用于简单的加密，比如我想对我MM说1314520，但怕别人知道，于是双方约定拿我的生日19880516作为密钥。1314520 xor 
+19880516 = 20665500，我就把20665500告诉MM。MM再次计算20665500 xor 
+19880516的值，得到1314520，于是她就明白了我的企图。<BR>&nbsp;&nbsp;&nbsp;&nbsp;下面我们看另外一个东西。定义两个符号#和@（我怎么找不到那个圈里有个叉的字符），这两个符号互为逆运算，也就是说(x 
+# y) @ y = x。现在依次执行下面三条命令，结果是什么？<BR><CODE>x &lt;- x # y<BR>y &lt;- x @ y<BR>x 
+&lt;- x @ y</CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;执行了第一句后x变成了x # y。那么第二句实质就是y &lt;- 
+x # y @ y，由于#和@互为逆运算，那么此时的y变成了原来的x。第三句中x实际上被赋值为(x # y) @ 
+x，如果#运算具有交换律，那么赋值后x就变成最初的y了。这三句话的结果是，x和y的位置互换了。<BR>&nbsp;&nbsp;&nbsp;&nbsp;加法和减法互为逆运算，并且加法满足交换律。把#换成+，把@换成-，我们可以写出一个不需要临时变量的swap过程(Pascal)。<BR><CODE>procedure 
+swap(var a,b:longint);<BR>begin<BR>&nbsp;&nbsp; a:=a + b;<BR>&nbsp;&nbsp; b:=a - 
+b;<BR>&nbsp;&nbsp; a:=a - 
+b;<BR>end;</CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;好了，刚才不是说xor的逆运算是它本身吗？于是我们就有了一个看起来非常诡异的swap过程：<BR><CODE>procedure 
+swap(var a,b:longint);<BR>begin<BR>&nbsp;&nbsp; a:=a xor b;<BR>&nbsp;&nbsp; b:=a 
+xor b;<BR>&nbsp;&nbsp; a:=a xor 
+b;<BR>end;</CODE><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;=== 4. not运算 
+===<BR>&nbsp;&nbsp;&nbsp;&nbsp;not运算的定义是把内存中的0和1全部取反。使用not运算时要格外小心，你需要注意整数类型有没有符号。如果not的对象是无符号整数（不能表示负数），那么得到的值就是它与该类型上界的差，因为无符号类型的数是用$0000到$FFFF依次表示的。下面的两个程序（仅语言不同）均返回65435。<BR><CODE>var<BR>&nbsp;&nbsp; 
+a:word;<BR>begin<BR>&nbsp;&nbsp; a:=100;<BR>&nbsp;&nbsp; a:=not 
+a;<BR>&nbsp;&nbsp; writeln(a);<BR>end.</CODE><BR><CODE>#include 
+&lt;stdio.h&gt;<BR>int main()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;unsigned short 
+a=100;<BR>&nbsp;&nbsp;&nbsp;&nbsp;a = ~a;<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf( 
+"%d\n", a );&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;return 
+0;<BR>}</CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;如果not的对象是有符号的整数，情况就不一样了，稍后我们会在“整数类型的储存”小节中提到。<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;=== 
+5. shl运算 ===<BR>&nbsp;&nbsp;&nbsp;&nbsp;a shl 
+b就表示把a转为二进制后左移b位（在后面添b个0）。例如100的二进制为1100100，而110010000转成十进制是400，那么100 shl 2 = 
+400。可以看出，a shl 
+b的值实际上就是a乘以2的b次方，因为在二进制数后添一个0就相当于该数乘以2。<BR>&nbsp;&nbsp;&nbsp;&nbsp;通常认为a shl 1比a 
+* 
+2更快，因为前者是更底层一些的操作。因此程序中乘以2的操作请尽量用左移一位来代替。<BR>&nbsp;&nbsp;&nbsp;&nbsp;定义一些常量可能会用到shl运算。你可以方便地用1 
+shl 16 - 
+1来表示65535。很多算法和数据结构要求数据规模必须是2的幂，此时可以用shl来定义Max_N等常量。<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;=== 
+6. shr运算 ===<BR>&nbsp;&nbsp;&nbsp;&nbsp;和shl相似，a shr 
+b表示二进制右移b位（去掉末b位），相当于a除以2的b次方（取整）。我们也经常用shr 1来代替div 
+2，比如二分查找、堆的插入操作等等。想办法用shr代替除法运算可以使程序效率大大提高。最大公约数的二进制算法用除以2操作来代替慢得出奇的mod运算，效率可以提高60%。<BR><BR><BR><STRONG>位运算的简单应用</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;有时我们的程序需要一个规模不大的Hash表来记录状态。比如，做数独时我们需要27个Hash表来统计每一行、每一列和每一个小九宫格里已经有哪些数了。此时，我们可以用27个小于2^9的整数进行记录。例如，一个只填了2和5的小九宫格就用数字18表示（二进制为000010010），而某一行的状态为511则表示这一行已经填满。需要改变状态时我们不需要把这个数转成二进制修改后再转回去，而是直接进行位操作。在搜索时，把状态表示成整数可以更好地进行判重等操作。<A 
+href="http://www.vijos.cn/Problem_Show.asp?id=1197" 
+target=_blank>这道题</A>是在搜索中使用位运算加速的经典例子。以后我们会看到更多的例子。<BR>&nbsp;&nbsp;&nbsp;&nbsp;下面列举了一些常见的二进制位的变换操作。<BR><BR><SPAN 
+style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;功能&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+示例&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;位运算<BR>----------------------+---------------------------+--------------------<BR>去掉最后一位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+(101101-&gt;10110)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+x shr 1<BR>在最后加一个0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+(101101-&gt;1011010)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | x shl 
+1<BR>在最后加一个1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+(101101-&gt;1011011)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | x shl 
+1+1<BR>把最后一位变成1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+(101100-&gt;101101)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+x or 1<BR>把最后一位变成0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+(101101-&gt;101100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+x or 1-1<BR>最后一位取反&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+(101101-&gt;101100)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+x xor 1<BR>把右数第k位变成1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+(101001-&gt;101101,k=3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x or (1 shl 
+(k-1))<BR>把右数第k位变成0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+(101101-&gt;101001,k=3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x and not (1 shl 
+(k-1))<BR>右数第k位取反&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+(101001-&gt;101101,k=3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x xor (1 shl 
+(k-1))<BR>取末三位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+(1101101-&gt;101)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+x and 
+7<BR>取末k位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+| (1101101-&gt;1101,k=5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | x and (1 shl 
+k-1)<BR>取右数第k位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+(1101101-&gt;1,k=4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+x shr (k-1) and 
+1<BR>把末k位变成1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+(101001-&gt;101111,k=4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x or (1 shl 
+k-1)<BR>末k位取反&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+| (101001-&gt;100110,k=4)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x xor (1 shl 
+k-1)<BR>把右边连续的1变成0&nbsp;&nbsp;&nbsp;&nbsp;| 
+(100101111-&gt;100100000)&nbsp;&nbsp;&nbsp;&nbsp;| x and 
+(x+1)<BR>把右起第一个0变成1&nbsp;&nbsp;&nbsp;&nbsp;| 
+(100101111-&gt;100111111)&nbsp;&nbsp;&nbsp;&nbsp;| x or 
+(x+1)<BR>把右边连续的0变成1&nbsp;&nbsp;&nbsp;&nbsp;| 
+(11011000-&gt;11011111)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x or 
+(x-1)<BR>取右边连续的1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+(100101111-&gt;1111)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | (x xor 
+(x+1)) shr 1<BR>去掉右起第一个1的左边 | 
+(100101000-&gt;1000)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | x and (x 
+xor 
+(x-1))</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;最后这一个在树状数组中会用到。<BR><BR><BR><STRONG>Pascal和C中的16进制表示</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;Pascal中需要在16进制数前加$符号表示，C中需要在前面加0x来表示。这个以后我们会经常用到。<BR><BR><STRONG>整数类型的储存</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;我们前面所说的位运算都没有涉及负数，都假设这些运算是在unsigned/word类型（只能表示正数的整型）上进行操作。但计算机如何处理有正负符号的整数类型呢？下面两个程序都是考察16位整数的储存方式（只是语言不同）。<BR><CODE>var<BR>&nbsp;&nbsp; 
+a,b:integer;<BR>begin<BR>&nbsp;&nbsp; a:=$0000;<BR>&nbsp;&nbsp; 
+b:=$0001;<BR>&nbsp;&nbsp; write(a,' ',b,' ');<BR>&nbsp;&nbsp; 
+a:=$FFFE;<BR>&nbsp;&nbsp; b:=$FFFF;<BR>&nbsp;&nbsp; write(a,' ',b,' 
+');<BR>&nbsp;&nbsp; a:=$7FFF;<BR>&nbsp;&nbsp; b:=$8000;<BR>&nbsp;&nbsp; 
+writeln(a,' ',b);<BR>end.</CODE><BR><CODE>#include &lt;stdio.h&gt;<BR>int 
+main()<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;short int a, 
+b;<BR>&nbsp;&nbsp;&nbsp;&nbsp;a = 0x0000;<BR>&nbsp;&nbsp;&nbsp;&nbsp;b = 
+0x0001;<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf( "%d %d ", a, b 
+);<BR>&nbsp;&nbsp;&nbsp;&nbsp;a = 0xFFFE;<BR>&nbsp;&nbsp;&nbsp;&nbsp;b = 
+0xFFFF;<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf( "%d %d ", a, b 
+);<BR>&nbsp;&nbsp;&nbsp;&nbsp;a = 0x7FFF;<BR>&nbsp;&nbsp;&nbsp;&nbsp;b = 
+0x8000;<BR>&nbsp;&nbsp;&nbsp;&nbsp;printf( "%d %d\n", a, b 
+);<BR>&nbsp;&nbsp;&nbsp;&nbsp;return 
+0;<BR>}</CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;两个程序的输出均为0 1 -2 -1 32767 
+-32768。其中前两个数是内存值最小的时候，中间两个数则是内存值最大的时候，最后输出的两个数是正数与负数的分界处。由此你可以清楚地看到计算机是如何储存一个整数的：计算机用$0000到$7FFF依次表示0到32767的数，剩下的$8000到$FFFF依次表示-32768到-1的数。32位有符号整数的储存方式也是类似的。稍加注意你会发现，二进制的第一位是用来表示正负号的，0表示正，1表示负。这里有一个问题：0本来既不是正数，也不是负数，但它占用了$0000的位置，因此有符号的整数类型范围中正数个数比负数少一个。对一个有符号的数进行not运算后，最高位的变化将导致正负颠倒，并且数的绝对值会差1。也就是说，not 
+a实际上等于-a-1。这种整数储存方式叫做“补码”。<BR><BR><STRONG>最后还有两句话</STRONG><BR>&nbsp;&nbsp;&nbsp;&nbsp;Matrix67原创<BR>&nbsp;&nbsp;&nbsp;&nbsp;转贴请注明出处</P>
+<DIV style="MARGIN: 4px 0px 6px -6px">
+<SCRIPT type=text/javascript><!--
+		google_ad_client = "pub-8918918108662869";
+		/* 728x90, 创建于 08-4-2 */
+		google_ad_slot = "5288878306";
+		google_ad_width = 728;
+		google_ad_height = 90;
+	//-->
+	</SCRIPT>
+
+<SCRIPT 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/show_ads.js" 
+type=text/javascript>
+	</SCRIPT>
+</DIV>
+<DIV class=post-footer>Posted in <A title="查看 Program Impossible 的全部文章" 
+href="http://www.matrix67.com/blog/archives/category/program-impossible" 
+rel="category tag">Program Impossible</A> <BR>Tags: <A 
+href="http://www.matrix67.com/blog/archives/tag/cè¯&shy;è¨" rel=tag>C语言</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/pascalè¯&shy;è¨" 
+rel=tag>Pascal语言</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/å¯ç&nbsp;" rel=tag>密码</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/äºè¿å¶" rel=tag>二进制</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/ä»£ç&nbsp;" rel=tag>代码</A>, <A 
+href="http://www.matrix67.com/blog/archives/tag/ä½è¿ç®" 
+rel=tag>位运算</A><BR>Trackback: 
+http://www.matrix67.com/blog/archives/263/trackback<BR><STRONG>我猜您可能还喜欢：</STRONG><BR>
+<UL>
+  <LI><A title=2007-07-24 href="http://www.matrix67.com/blog/archives/264" 
+  rel=bookmark>位运算简介及实用技巧（二）：进阶篇(1)</A> 
+  <LI><A title=2007-07-26 href="http://www.matrix67.com/blog/archives/268" 
+  rel=bookmark>位运算简介及实用技巧（四）：实战篇</A> 
+  <LI><A title=2007-07-26 href="http://www.matrix67.com/blog/archives/266" 
+  rel=bookmark>位运算简介及实用技巧（三）：进阶篇(2)</A> 
+  <LI><A title=2007-08-08 href="http://www.matrix67.com/blog/archives/280" 
+  rel=bookmark>神奇的分形艺术（三）：Sierpinski三角形</A> 
+  <LI><A title=2007-11-24 href="http://www.matrix67.com/blog/archives/362" 
+  rel=bookmark>旧闻一则：神秘的0x5f3759df 不可思议的Quake III源码</A> 
+  <LI><A title=2007-12-24 href="http://www.matrix67.com/blog/archives/393" 
+  rel=bookmark>计算阶乘的另一些有趣的算法</A> 
+  <LI><A title=2009-04-09 href="http://www.matrix67.com/blog/archives/1696" 
+  rel=bookmark>IBM Ponder This史上最难谜题：给出谜底猜谜面</A> 
+  <LI><A title=2007-05-27 href="http://www.matrix67.com/blog/archives/211" 
+  rel=bookmark>痛下决心努力转C，高考结束前完成计划</A> </LI></UL><!-- Similar Posts took 61.817 ms --></DIV></DIV></DIV><!-- You can start editing here. --><A 
+name=comments></A>
+<H2 style="BORDER-TOP: #4f5255 1px dotted; MARGIN-TOP: 4px; PADDING-TOP: 6px">55 
+条回复</H2>
+<UL class=commentlist>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 沙发 | <SMALL class=commentmetadata>2007-07-23 
+  9:18 </SMALL>| <A name=comment-1084></A>Andriy 说： 
+  <P>&nbsp;&nbsp;&nbsp;&nbsp;有收获..<BR>&nbsp;&nbsp;&nbsp;&nbsp;建议下次写篇&lt;Matrix67简介及使用技巧&gt;_基础/提高/大牛篇.</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 板凳 | <SMALL class=commentmetadata>2007-07-23 
+  12:20 </SMALL>| <A name=comment-1085></A>yiyi 说： 
+  <P>不错不错,很基础&amp;使用,期待(二).<BR>以及LS说的那篇~~</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地毯 | <SMALL class=commentmetadata>2007-07-23 
+  15:44 </SMALL>| <A name=comment-1086></A>ConcreteVitamin 说： 
+  <P>今日下午在某 OI 群里得到了一个更直观的对 xor&nbsp;&nbsp;的解释:<BR><STRONG>xor 的意思就是 
+  "是不是不一样"</STRONG></P>
+  <P><SPAN style="COLOR: red">回复：是啊，所以说才叫“异或”嘛</SPAN></P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地板 | <SMALL class=commentmetadata>2007-07-23 
+  18:20 </SMALL>| <A name=comment-1087></A>Greedyguy 说： 
+  <P>&gt;&gt;对于一个整数a，-a和~a+1的值是相同的。</P>
+  <P>这个是正确的么？<BR>我做了一下，<BR>根据定义有： Not a+1=upperlim-a+1<BR>那么原式化成： 
+  upperlim+1=0</P>
+  <P>对于无符号类型(word,dword,qword)肯定是正确的。<BR>但对于有符号类型，如integer，upperlim=$7FFF，显然$8000&lt;&gt;$0000..............</P>
+  <P>于是我又写了一段程序，看看是怎么回事：</P>
+  <P>var<BR>&nbsp;&nbsp;a:integer;<BR>begin<BR>&nbsp;&nbsp;a:=50;<BR>&nbsp;&nbsp;writeln(not 
+  a+1);<BR>&nbsp;&nbsp;readln<BR>end.</P>
+  <P>答案是-50.........</P>
+  <P>那么integer的upperlim就不是32767了，那是多少？<BR>我又写了一段程序：</P>
+  <P>var<BR>&nbsp;&nbsp;a:integer;<BR>begin<BR>&nbsp;&nbsp;a:=50;<BR>&nbsp;&nbsp;writeln(not 
+  a+a);<BR>&nbsp;&nbsp;readln<BR>end.</P>
+  <P>答案是-1。</P>
+  <P>这说明integer的upperlim是65535。</P>
+  <P>这样看来，对于有符号类型的not运算的定义应该是：与该类型对应的无符号类型的上界与被运算数的差。</P>
+  <P>不知道是否正确。请指教，谢谢。</P>
+  <P>另外，希望大牛讲补码的那一部分准确一些，会误导初学者的。</P>
+  <P><SPAN 
+  style="COLOR: red">回复：位运算是在二进制位的基础上定义的，not运算的定义是把内存中的0和1全部取反<BR>对于无符号类型，取反后的效果就是把这个数在数轴上的位置“对称翻折到另一边去”，因为无符号类型的数是用$0000到$FFFF依次表示的。<BR>而对于有符号的类型，取反后最高位的变化导致了正负颠倒，又因为负数储存使用补码，所以效果就是变为-a-1。这与上下界没有任何关系</P>
+  <P>P.S. 文章最后一段容易误导人，我把它删了</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地下室 | <SMALL class=commentmetadata>2007-07-23 
+  19:19 </SMALL>| <A name=comment-1088></A>GreedyGuy 说： 
+  <P>理解了，谢谢matrix67。</P>
+  <P><SPAN style="COLOR: red">回复：文章重新整理了一下，删改了一些东西</SPAN></P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地基 | <SMALL class=commentmetadata>2007-07-23 
+  20:04 </SMALL>| <A name=comment-1089></A>Richardyi 说： 
+  <P>来挑错。。。0010（2）=2（10）。。。</P>
+  <P><SPAN style="COLOR: red">回复：谢</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地壳 | <SMALL class=commentmetadata>2007-07-23 
+  21:07 </SMALL>| <A name=comment-1090></A>逆铭 说： 
+  <P>看来没有机会在NOI前看完了……</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地幔 | <SMALL class=commentmetadata>2007-07-24 
+  19:47 </SMALL>| <A name=comment-1091></A>voldemort 说： 
+  <P>把右数第k位变成0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+  (101101-&gt;101001,k=3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x or (1 shl 
+  (k-1)) - 1</P>
+  <P>wrong?</P>
+  <P>1 shl (3-1) = 000100<BR>000100 or 101101 = 101101<BR>101101 - 1 = 
+101100</P>
+  <P>Is this right??</P>
+  <P><SPAN 
+  style="COLOR: red">回复：谢谢提醒<BR>新加的，没验证，果然写错了；改过来了：<BR>把右数第k位变成1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+  (101001-&gt;101101,k=3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x or (1 shl 
+  (k-1))<BR>把右数第k位变成0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 
+  (101101-&gt;101001,k=3)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| x and not (1 shl 
+  (k-1))</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 地核 | <SMALL class=commentmetadata>2007-07-24 
+  20:26 </SMALL>| <A name=comment-1092></A>voldemort 说： 
+  <P>问一下：怎样取右数第k个数？<BR>e.g:<BR>101101 , k=4 , ans=1<BR>101101 , k=5 , 
+  ans=0</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 10楼 | <SMALL class=commentmetadata>2007-07-24 
+  20:31 </SMALL>| <A name=comment-1093></A>voldemort 说： 
+  <P>我自己想到了</P>
+  <P>x[i]:=(x shr (i-1)) and 1</P>
+  <P><SPAN style="COLOR: red">回复：不错！我把这个加进去了</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 11楼 | <SMALL class=commentmetadata>2007-07-26 
+  21:52 </SMALL>| <A name=comment-1094></A>xiaobai 说： 
+  <P>不愧是matrix67大牛啊！</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 12楼 | <SMALL class=commentmetadata>2007-07-27 
+  9:34 </SMALL>| <A name=comment-1095></A>Ronice 说： 
+  <P>取末k位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  | (1101101-&gt;1101,k=5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | x and (1 shl 
+  k-1)<BR>Wrong</P>
+  <P><SPAN 
+  style="COLOR: red">回复：sorry，没看到哪里有问题；取末5位时第5位上的0是前导零，我省略了</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 12a楼 | <SMALL class=commentmetadata>2007-07-27 
+  23:26 </SMALL>| <A name=comment-1096></A>Ronice 说： 
+  <P>抱歉——没看到是0[muteness]<BR>&nbsp;&nbsp;&nbsp;&nbsp;有点用余光看文章…… - -||||</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 14楼 | <SMALL class=commentmetadata>2007-08-02 
+  11:16 </SMALL>| <A name=comment-1097></A>camily 说： 
+  <P>取右边连续的1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+  (100101111-&gt;1111)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | (x xor 
+  (x+1)) shr 1</P>
+  <P>发现一个更有意思的计算：<BR>取右边连续的1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+  (100101111-&gt;1111)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | x - x 
+  and (x+1)</P>
+  <P><SPAN style="COLOR: red">回复：有意思；但是这个减法……耗时了</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 15楼 | <SMALL class=commentmetadata>2007-08-05 
+  17:56 </SMALL>| <A name=comment-1098></A>人贱合一 说： 
+  <P>谢谢了，<BR>位运算有个质的飞越...</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 16楼 | <SMALL class=commentmetadata>2007-10-15 
+  20:46 </SMALL>| <A name=comment-1099></A>逆铭 说： 
+  <P>觉得也许有必要介绍C++的bitset...</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 17楼 | <SMALL class=commentmetadata>2007-10-23 
+  11:29 </SMALL>| <A name=comment-1100></A>方力 说： 
+  <P>补充一下什么叫原码，反码，补码，<BR>原码，二进制中第一个数表示是正数还是负数（如matrix67所说) 
+  ，剩下的数表示所要表示的数的绝对值.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如，0010=2,&nbsp;&nbsp;1010=-2<BR>反码，因为原码在计算机中不方便，引入了反码，反码就是负数在二进制中除了第一个数表示符号外，其他的数都<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;依次取反，比如127=01111111，而-127=10000000；<BR>补码，虽然反码方便但是在计算中会错（正数和负数的计算），因为0000=0,1111=-0=0;有两个数表示<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同一个数，所以在计算中会少一，补码就是在负数的反码上加上一。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;比如-5=11111010（反码），补码为-5=11111011。<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P>
+  <P><SPAN style="COLOR: red">回复：不错，谢谢补充！</SPAN></P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 18楼 | <SMALL class=commentmetadata>2007-11-01 
+  16:13 </SMALL>| <A name=comment-1101></A>ergyioreya 说： 
+  <P>取末k位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  | (1101101-&gt;1101,k=5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | x and (1 shl 
+  k-1)</P>
+  <P>依然觉得这句话有问题，上面说取末K位，且K=5，为什么转化后只有4位<BR>应该改成是 x and (1 shl (k+1)-1)</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 19楼 | <SMALL class=commentmetadata>2007-11-01 
+  16:17 </SMALL>| <A name=comment-1102></A>ergyioreya 说： 
+  <P>SORRY <BR>没看到下面的人已经问了，一时头脑发热，我说的那个错了，Matrix67 正解</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 20楼 | <SMALL class=commentmetadata>2007-11-10 
+  15:14 </SMALL>| <A name=comment-1103></A>xia0ji 说： 
+  <P>请教一下<BR>procedure swap(var a,b:longint);<BR>begin<BR>&nbsp;&nbsp; a:=a xor 
+  b;<BR>&nbsp;&nbsp; b:=a xor b;<BR>&nbsp;&nbsp; a:=a xor b;<BR>end;</P>
+  <P>procedure swap(var a,b:longint);<BR>var<BR>&nbsp;&nbsp; 
+  t:longint;<BR>begin<BR>&nbsp;&nbsp;t:=a;<BR>&nbsp;&nbsp;a:=b;<BR>&nbsp;&nbsp;b:=t;<BR>end;<BR>那个快一些呢?</P>
+  <P><SPAN style="COLOR: red">回复：自己写一个循环运行10000000次的程序来测一测吧</SPAN></P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 21楼 | <SMALL class=commentmetadata>2008-01-25 
+  21:49 </SMALL>| <A name=comment-1104></A>csf 说： 
+  <P>果然牛！学习了！</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 22楼 | <SMALL class=commentmetadata>2008-02-17 
+  15:00 </SMALL>| <A name=comment-1105></A>fafeymao 说： 
+  <P>[smile],谢过</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/386f9febe45f9f382b42f6aaccf6a797.jpg" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 23楼 | <SMALL class=commentmetadata>2008-04-04 
+  16:17 </SMALL>| <A name=comment-3282></A><A class=url href="http://251815992/" 
+  rel="external nofollow">lychees</A> 说： 
+  <P>= -<BR>快排里的swap用<BR>a:=a xor b;<BR>b:=a xor b;<BR>a:=a xor 
+  b;<BR>会出现a和b代表相同元素的情况交换出‘0’</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(1).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 24楼 | <SMALL class=commentmetadata>2008-04-13 
+  16:52 </SMALL>| <A name=comment-3542></A><A class=url 
+  href="http://xecycle.googlepages.com/" rel="external nofollow">XeCycle</A> 说： 
+  <P>对ls：<BR>我用C++写的这个总有一个是0：<BR>inline void swap(long&amp; a,long&amp; b) 
+  {<BR>a^=b^=a^=b;<BR>}<BR>可就是想不通……</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(2).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 25楼 | <SMALL class=commentmetadata>2008-04-16 
+  11:20 </SMALL>| <A name=comment-3846></A><A class=url 
+  href="http://hi.baidu.com/µØÐÎÖ®Ê×" rel="external nofollow">ForFly</A> 说： 
+  <P>楼上两位看我的一篇文章吧：<BR><A 
+  href="http://hi.baidu.com/µØÐÎÖ®Ê×/blog/item/0ee3155142347f1b377abe4f.html" 
+  rel=nofollow>http://hi.baidu.com/µØÐÎÖ®Ê×/blog/item/0ee3155142347f1b377abe4f.html</A></P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(3).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 26楼 | <SMALL class=commentmetadata>2008-05-02 
+  3:30 </SMALL>| <A name=comment-8392></A><A class=url 
+  href="http://hexun.com/goleenuoer" rel="external nofollow">goleenuoer</A> 说： 
+  <P>a shl 1比a * 2更快 应该是a shl 1比a^2更快吧?忙碌的matrix67打错了.....</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(3).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 27楼 | <SMALL class=commentmetadata>2008-05-02 
+  3:34 </SMALL>| <A name=comment-8393></A><A class=url 
+  href="http://hexun.com/goleenuoer" rel="external nofollow">goleenuoer</A> 说： 
+  <P>能请教一下a and -a怎么理解么?<BR>前面添一个"-"怎么理解??</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/298b213eaa1404acf9f13fd56476e91b.jpg" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 28楼 | <SMALL class=commentmetadata>2008-05-11 
+  23:45 </SMALL>| <A name=comment-9623></A>tinge4 说： 
+  <P>26楼，你真牛， a &lt;&lt; 1 本来就是 a*2 的意思。</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(4).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 29楼 | <SMALL class=commentmetadata>2008-07-19 
+  15:00 </SMALL>| <A name=comment-99853></A>kkkk 说： 
+  <P>末k位取反： | (101001-&gt;100110,k=4) | x xor (1 shl k-1)</P>
+  <P>算出来是33=100001<BR>怎么算出来不对？？</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(4).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 30楼 | <SMALL class=commentmetadata>2008-07-20 
+  12:01 </SMALL>| <A name=comment-100549></A>kkkk 说： 
+  <P>，，我的错。<BR>没注意优先级。</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(5).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 31楼 | <SMALL class=commentmetadata>2008-08-11 
+  22:22 </SMALL>| <A name=comment-111028></A>ssxyh 说： 
+  <P>楼层: 20楼 | 2007-11-10 15:14 | xia0ji 说：<BR>请教一下<BR>procedure swap(var 
+  a,b:longint);<BR>begin<BR>a:=a xor b;<BR>b:=a xor b;<BR>a:=a xor 
+b;<BR>end;</P>
+  <P>procedure swap(var 
+  a,b:longint);<BR>var<BR>t:longint;<BR>begin<BR>t:=a;<BR>a:=b;<BR>b:=t;<BR>end;<BR>那个快一些呢?</P>
+  <P>回复：自己写一个循环运行10000000次的程序来测一测吧</P>
+  <P>我测试了30000000的操作，xor明显较慢，这个是为什么？是不是赋值操作比xor运算快些。</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 32楼 | <SMALL class=commentmetadata>2008-09-24 
+  12:25 </SMALL>| <A name=comment-171608></A><A class=url 
+  href="http://www.matrix67.com/blog/archives/813" 
+  rel="external nofollow">Matrix67: My Blog » Blog Archive » 
+  趣题：用位运算生成下一个含有k个1的二进制数</A> 说： 
+  <P>[...] 
+  &nbsp;&nbsp;&nbsp;&nbsp;在所有8-bit的整数中，含有k个数字“1”的二进制数一共有C(8,k)个。给出其中的一个二进制数，你如何利用位运算快速找到下一个恰有k个“1”的数？例如，如果给你二进制数01011100，那么下一个（含4个“1”的）数就是01100011。在继续阅读下去之前，建议你仔细思考一下。你或许会想看看我很早以前写的一篇介绍位运算的文章。这是一道很好的题目，很多位运算技巧在这里都有体现。 
+  [...]</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(6).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 33楼 | <SMALL class=commentmetadata>2008-09-28 
+  14:54 </SMALL>| <A name=comment-171761></A>viva 说： 
+  <P>用+/-swap两个变量a、b的值，在a+b阶段若两个数很大，容易超界，如果适用xor会比较安全</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/4f643319822e87e2965f84585dd41282.jpg" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 34楼 | <SMALL class=commentmetadata>2008-10-10 
+  20:24 </SMALL>| <A name=comment-172246></A>liwei 说： 
+  <P>"有时我们的程序需要一个规模不大的Hash表来记录状态。比如，做数独时我们需要27个Hash表来统计每一行、每一列和每一个小九宫格里已经有哪些数了。此时，我们可以用27个小于2^9的整数进行记录。"</P>
+  <P>这样的话就只能记录哪些格子已经填了，但是没法记录填入的数字。</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(7).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 35楼 | <SMALL class=commentmetadata>2008-12-19 
+  20:00 </SMALL>| <A name=comment-175985></A><A class=url 
+  href="http://blog.sina.com.cn/ray040123" rel="external nofollow">EZ_ray</A> 说： 
+
+  <P>应该是有temp的算法快一些吧<BR>两种都有3次赋值， 而诡异的多了3次xor运算</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/79eb0f4df7b42d3295e48e96cac47b6c.jpg" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 36楼 | <SMALL class=commentmetadata>2008-12-21 
+  21:11 </SMALL>| <A name=comment-176180></A>R 说： 
+  <P>记得在初二那会儿刚学编程，准备10天后参加noip初赛，给的初赛资料上就有反码跟补码，记了半天，结果5年来noip初赛都没考过……<BR>不过初二刚学10天就过了初赛感觉还是不错的</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 37楼 | <SMALL class=commentmetadata>2009-01-10 
+  15:43 </SMALL>| <A name=comment-176938></A><A class=url 
+  href="http://www.matrix67.com/blog/archives/1209" 
+  rel="external nofollow">Matrix67: My Blog » Blog Archive » 
+  趣题：理想模型下的排序算法（上）</A> 说： 
+  <P>[...] 
+  &nbsp;&nbsp;&nbsp;&nbsp;这个理想模型牛B就牛B在，我可以用大整数实现任意长度的数组的常数级别存取！比如，我们假设数组a的“单位宽度”为w，那么让a[i]自加一就相当于让一个超大二进制整数a加上1&lt;&lt;(i*w)。想要取出a[i]的值，也就相当于让a&gt;&gt;(i*w)再模1&lt;&lt;w。再回想位运算的一个妙用：x 
+  and (x xor (x-1))，或者写成x and 
+  -x，可以取出（二进制数）x的最右边那个1。此时，问题立刻迎刃而解。维护一个超级超级长的二进制数a，再维护一个超级超级长的数组b。只要读到一个数x，如果b[1&lt;&lt;x]为0，我们就让a加上1&lt;&lt;x。然后，令b[1&lt;&lt;x]自加一。输出时，只需要不断取a中位置最低的那个“1”，然后按照b数组的值输出相应多个数即可。一个问题是，我们这样输出的是1&lt;&lt;x啊，要想输出原来的数x该咋办？是不是还要想办法用常数时间实现log运算呢？哈哈，你又想复杂了！只需要再维护一个数组c，每次读到x时，令c[1&lt;&lt;x]=x即可。到时候呢，直接输出c数组里面的值就可以了。因此，整个算法流程如下： 
+  [...]</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(8).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 38楼 | <SMALL class=commentmetadata>2009-02-02 
+  22:51 </SMALL>| <A name=comment-177956></A><A class=url 
+  href="http://hi.baidu.com/oibltx" rel="external nofollow">OiBLtx</A> 说： 
+  <P>M67大牛，能不能用位运算先算出某个十进制数的二进制有多少位？如果能的话我们以后输出十进制数的二进制不就快多了吗？</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(9).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 39楼 | <SMALL class=commentmetadata>2009-03-09 
+  16:24 </SMALL>| <A name=comment-180105></A>starwakeup 说： 
+  <P>谢谢一下 M67</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/440608b37b9f69c7f35e62e2f4f2d134.jpg" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 40楼 | <SMALL class=commentmetadata>2009-04-09 
+  11:03 </SMALL>| <A name=comment-181523></A><A class=url 
+  href="http://cyclone77.cn/" rel="external nofollow">cyclone77</A> 说： 
+  <P>很有收获 位运算可以解决哪些问题?</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo avatar-default" height=48 
+  alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 41楼 | <SMALL class=commentmetadata>2009-04-21 
+  23:28 </SMALL>| <A name=comment-181999></A><A class=url 
+  href="http://www.matrix67.com/blog/archives/1768" 
+  rel="external nofollow">Matrix67: My Blog » Blog Archive » 
+  趣题：寻找策略使得总有一人猜出他背上的数</A> 说： 
+  <P>[...] 
+  答案：为了下面叙述的简便，我们把数字1到16简单地替换为0到15。游戏前，大家按某种顺序给所有人从0到15依次编号。游戏开始后，每个人把自己能看到的15个数与自己的编号一起异或起来（按位异或），在猜数时报出这个异或的结果。这个方案能保证总有一个人恰好报出自己的数。假设这16个数异或起来的结果为X（显然0 
+  ≤ X ≤ 15），第i个人身上的数记为A_i，那么他猜的数其实就是X xor A_i xor 
+  i。那么，编号为X的人（此时i=X）报出的数恰好就是他背上的那个数。对于数字1到16的情况，只需要在计算前后减一加一即可。 
+  这个问题可以从n=2的情形很快入手。当n=2时，只需其中一个人报和对方一样的数，另一个人报和对方不一样的数即可。 [...]</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/1c7e987145ebc24f93c51c9cbc6b0e3e.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: Answer to Life, the Universe, and Everything | 
+  <SMALL class=commentmetadata>2009-08-15 22:31 </SMALL>| <A 
+  name=comment-185733></A>DearBear 说： 
+  <P>写了这么多年。碰到就来查查。呵呵。好用。<BR>M67 干的不错。</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/1c7e987145ebc24f93c51c9cbc6b0e3e.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 43楼 | <SMALL class=commentmetadata>2009-08-15 
+  22:32 </SMALL>| <A name=comment-185734></A>DearBear 说： 
+  <P>写了这么多年。碰到就来查查。呵呵。好用。<BR>M67 真干的不错。</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/1c7e987145ebc24f93c51c9cbc6b0e3e.png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 44楼 | <SMALL class=commentmetadata>2009-08-15 
+  22:34 </SMALL>| <A name=comment-185735></A>DearBear 说： 
+  <P>啊！ 42层！ 是银河系漫游指南的终极答案吧！ 呵呵！ 第一下没有反应过来！ 第一次注意到42楼这个彩蛋。。 
+  赞M67。赞道格拉斯~！</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(10).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 45楼 | <SMALL class=commentmetadata>2009-10-22 
+  16:12 </SMALL>| <A name=comment-188489></A>lxzxcc 说： 
+  <P>有帮助，谢了</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(11).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 46楼 | <SMALL class=commentmetadata>2009-11-13 
+  20:16 </SMALL>| <A name=comment-189789></A>未知 说： 
+  <P>很详细……很佩服 看后收获很大</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(12).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 47楼 | <SMALL class=commentmetadata>2009-11-15 
+  20:02 </SMALL>| <A name=comment-189867></A>Ray 说： 
+  <P>强大！学习了！</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/2cfe568d1e2c35341ddfe7f3f8cc4e1b.jpg" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 48楼 | <SMALL class=commentmetadata>2009-11-19 
+  15:10 </SMALL>| <A name=comment-190033></A><A class=url 
+  href="http://hi.baidu.com/daep" rel="external nofollow">daep25</A> 说： 
+  <P>确实不错，只是用处不是特别大</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(13).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 49楼 | <SMALL class=commentmetadata>2009-11-20 
+  21:01 </SMALL>| <A name=comment-190101></A>OIer:liyue 说： 
+  <P>Orz Martrix67 神牛…………<BR>明天就NOIP2009了</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(14).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 50楼 | <SMALL class=commentmetadata>2009-11-27 
+  21:23 </SMALL>| <A name=comment-190473></A>Aule 说： 
+  <P>取末k位 | (1101101-&gt;1101,k=5) | x and (1 shl k-1)</P>
+  <P>这个有歧义 左边k位还是右边k位</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(15).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 51楼 | <SMALL class=commentmetadata>2009-12-23 
+  19:33 </SMALL>| <A name=comment-191447></A>海盗 说： 
+  <P>取末k位(1101101-&gt;1101,k=5)为x and (1 shl k-1)<BR>我认为应该有点儿问题<BR>1 shl 4 = 
+  10000<BR>那么： 1101101 and 10000 =1101101 and 0010000 = 0000000 = 0<BR>而不是 
+  1101</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(16).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 52楼 | <SMALL class=commentmetadata>2009-12-26 
+  20:31 </SMALL>| <A name=comment-191551></A>SHvsMK 说： 
+  <P>取末k位 | (1101101-&gt;1101,k=5) | x and (1 shl k-1)<BR>这里的k应该是4吧！</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/bcba996cc9031726773c417c016d9d03.jpg" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 53楼 | <SMALL class=commentmetadata>2010-01-02 
+  11:02 </SMALL>| <A name=comment-191814></A>MwindyT 说： 
+  <P>高手 我正备战NOI 希望matrix67牛提供一些noi的资料(关于编程技巧,与一些可以优化时间的方法)</P></DIV>
+  <LI class="">
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(17).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 54楼 | <SMALL class=commentmetadata>2010-02-01 
+  4:27 </SMALL>| <A name=comment-192873></A>ljz1989 说： 
+  <P>如前面所说，取末k位(1101101-&gt;1101,k=5)为x and (1 shl 
+  k-1)<BR>好像有问题，应该是取末k位(1101101-&gt;1101,k=4)为x and sum( 1 shl 
+  i-1))(i:k-&gt;1)</P></DIV>
+  <LI class=graybox>
+  <DIV class=avatar><IMG class="avatar avatar-48 photo" height=48 alt="" 
+  src="F:\ACM\ACM教程\位运算技巧\Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files\ad516503a11cd5ca435acc9bb6523536(17).png" 
+  width=48></DIV>
+  <DIV class=comment-content>楼层: 55楼 | <SMALL class=commentmetadata>2010-02-01 
+  4:37 </SMALL>| <A name=comment-192874></A>ljz1989 说： 
+  <P>哦 原来那个也对 不过应该加括号吧 优先级问题 应该加上括号吧 即<BR>取末k位(1101101-&gt;1101,k=5)为x and (（1 
+  shl k）-1)</P></DIV></LI></UL><A name=respond></A>
+<H3>您也随便说几句吧：</H3>
+<FORM id=commentform action=http://www.matrix67.com/blog/wp-comments-post.php 
+method=post>
+<P><INPUT class=styled id=author tabIndex=1 size=22 name=author> <LABEL 
+for=author>您的昵称（必填）</LABEL> <INPUT type=hidden value=263 name=comment_post_ID> 
+<INPUT type=hidden value=/blog/archives/263 name=redirect_to></P>
+<P><INPUT id=email tabIndex=2 size=22 name=email> <LABEL 
+for=email>您的E-mail地址（必填）</LABEL></P>
+<P><INPUT id=url tabIndex=3 size=22 name=url> <LABEL 
+for=url>您的网站（可选）</LABEL></P><!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+<P><TEXTAREA id=comment tabIndex=4 name=comment rows=5 cols=100></TEXTAREA></P>
+<P><STRONG>请注意：</STRONG>如果您是第一次在本站发表评论，您的评论需要通过管理员的审核。</P>
+<P>您可以在<A href="http://gravatar.com/" target=_blank>Gravatar</A>设置您的头像。</P>
+<P><INPUT id=submit tabIndex=5 type=submit value=提交评论 name=submit></P></FORM>
+<P class=pagination></P></DIV></DIV>
+<DIV id=sidebar-wrapper>
+<DIV id=sidebar>
+<DIV class=sideblock>
+<H3>Category</H3>
+<UL>
+  <LI class="cat-item cat-item-12"><A title="查看 Brain Storm 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/brain-storm">Brain 
+  Storm</A> (341) </LI>
+  <LI class="cat-item cat-item-14"><A title="查看 Design of Design 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/design-of-design">Design 
+  of Design</A> (39) </LI>
+  <LI class="cat-item cat-item-10"><A title="查看 Internet Vision 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/internet-vision">Internet 
+  Vision</A> (122) </LI>
+  <LI class="cat-item cat-item-11"><A title="查看 Movie Time 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/movie-time">Movie 
+  Time</A> (46) </LI>
+  <LI class="cat-item cat-item-9"><A title="查看 Program Impossible 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/program-impossible">Program 
+  Impossible</A> (140) </LI>
+  <LI class="cat-item cat-item-8"><A title="查看 This is My Life 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/this-is-my-life">This is 
+  My Life</A> (97) </LI>
+  <LI class="cat-item cat-item-13"><A title="查看 Tough Computer 下的所有文章" 
+  href="http://www.matrix67.com/blog/archives/category/tough-computer">Tough 
+  Computer</A> (28) </LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Subscribe</H3>
+<DIV class=textwidget><A title="Matrix67: My Blog" 
+style="MARGIN-TOP: -18px; FLOAT: right; MARGIN-RIGHT: 12px" 
+href="http://www.matrix67.com/blog/feed.asp"><IMG 
+style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" 
+alt="" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/orange_e.gif"></A> 
+
+<UL>
+  <LI><A 
+  href="http://www.zhuaxia.com/add_channel.php?url=http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>抓虾</A> </LI>
+  <LI><A href="http://www.anothr.com/add?url=http://www.matrix67.com/blog/" 
+  target=_blank>哪吒</A> </LI>
+  <LI><A 
+  href="http://www.xianguo.com/subscribe.php?url=http%3A%2F%2Fwww.matrix67.com%2Fblog" 
+  target=_blank>鲜果</A> </LI>
+  <LI><A href="http://sofa.souyo.com/add?f=http://www.matrix67.com/blog/" 
+  target=_blank>沙发</A> </LI>
+  <LI><A href="http://www.live.com/?add=http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>Live</A> </LI>
+  <LI><A 
+  href="http://www.google.com/ig/add?feedurl=http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>Google</A> </LI>
+  <LI><A 
+  href="http://www.netvibes.com/subscribe.php?type=rss&amp;url=http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>Netvibes</A> </LI>
+  <LI><A 
+  href="http://www.bloglines.com/sub/http://www.matrix67.com/blog/feed.asp" 
+  target=_blank>Bloglines</A></LI></UL></DIV></DIV>
+<DIV class=sideblock>
+<H3>Control Panel</H3>
+<UL>
+  <LI><A href="http://www.matrix67.com/blog/wp-login.php">登录</A> </LI>
+  <LI><A title="使用 RSS 2.0 同步此内容" 
+  href="http://www.matrix67.com/blog/feed.asp">文章 <ABBR 
+  title="Really Simple Syndication">RSS</ABBR></A> </LI>
+  <LI><A title="RSS 上的最近评论" 
+  href="http://www.matrix67.com/blog/comments/feed"><ABBR 
+  title="Really Simple Syndication">RSS</ABBR> 评论</A> </LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Random Articles</H3>
+<UL>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;明天考英语，单议.  11.06.2008" 
+  href="http://www.matrix67.com/blog/archives/536" 
+  rel=bookmark>经典证明：Cantor-Bernstein-Schroeder定理</A></LI>
+  <LI><A title="现在，我想和MM have fun……欢迎大宮..  11.09.2007" 
+  href="http://www.matrix67.com/blog/archives/307" rel=bookmark>数学推导之Sex is 
+  fun完整版</A></LI>
+  <LI><A 
+  title="&nbsp;&nbsp;&nbsp;&#13;&#10;&#13;&#10;&nbsp;&nbsp;&nbsp;&nbsp;...  25.05.2009" 
+  href="http://www.matrix67.com/blog/archives/1923" 
+  rel=bookmark>等分阴阳图的N种方法</A></LI>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;今天学到一个好箮.  17.02.2009" 
+  href="http://www.matrix67.com/blog/archives/1392" rel=bookmark>经典证明：Chaitin定理 
+  不可能编程判断代码的最简性</A></LI>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;上次说到维度时ﮮ.  3.02.2009" 
+  href="http://www.matrix67.com/blog/archives/1323" 
+  rel=bookmark>不同维度的对话：带你进入四维世界</A></LI>
+  <LI><A title="&nbsp;&nbsp;&nbsp;&nbsp;好像目前还没有议.  4.08.2007" 
+  href="http://www.matrix67.com/blog/archives/276" 
+  rel=bookmark>十个利用矩阵乘法解决的经典题目</A></LI>
+  <LI><A title="我最喜欢的一首歌：图片来源：http...  12.11.2007" 
+  href="http://www.matrix67.com/blog/archives/350" 
+  rel=bookmark>水~~~~我爱死静茹了~~~~</A></LI>
+  <LI><A title="最近给我妈写了一个连连看的作弊箮.  1.09.2006" 
+  href="http://www.matrix67.com/blog/archives/106" rel=bookmark>连连看 cheater 
+  release</A></LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Recent Comments</H3>
+<UL id=recentcomments>
+  <LI class=recentcomments>mymstephen 在 <A 
+  href="http://www.matrix67.com/blog/archives/2769/comment-page-2#comment-192910">《生活中的算法》写作计划</A> 
+  上的评论</LI>
+  <LI class=recentcomments><A class=url href="http://www.anchorsun.com/" 
+  rel="external nofollow">Anchor</A> 在 <A 
+  href="http://www.matrix67.com/blog/archives/2769/comment-page-2#comment-192908">《生活中的算法》写作计划</A> 
+  上的评论</LI>
+  <LI class=recentcomments>小菜鸟 在 <A 
+  href="http://www.matrix67.com/blog/archives/39/comment-page-1#comment-192907">二分图最大匹配问题匈牙利算法</A> 
+  上的评论</LI>
+  <LI class=recentcomments>Milo 在 <A 
+  href="http://www.matrix67.com/blog/archives/2769/comment-page-2#comment-192894">《生活中的算法》写作计划</A> 
+  上的评论</LI>
+  <LI class=recentcomments><A class=url href="http://mijia.org/blog" 
+  rel="external nofollow">MJiA</A> 在 <A 
+  href="http://www.matrix67.com/blog/archives/2769/comment-page-2#comment-192893">《生活中的算法》写作计划</A> 
+  上的评论</LI>
+  <LI class=recentcomments>oak 在 <A 
+  href="http://www.matrix67.com/blog/archives/2769/comment-page-2#comment-192889">《生活中的算法》写作计划</A> 
+  上的评论</LI>
+  <LI class=recentcomments>hayate 在 <A 
+  href="http://www.matrix67.com/blog/archives/2769/comment-page-2#comment-192888">《生活中的算法》写作计划</A> 
+  上的评论</LI>
+  <LI class=recentcomments><A class=url href="http://blog.csdn.net/Solstice" 
+  rel="external nofollow">Solstice</A> 在 <A 
+  href="http://www.matrix67.com/blog/archives/2769/comment-page-2#comment-192887">《生活中的算法》写作计划</A> 
+  上的评论</LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Search</H3>
+<FORM id=searchform action=http://www.matrix67.com/blog method=get>
+<DIV><INPUT id=s size=15 name=s> <INPUT type=submit value=搜索> 
+</DIV></FORM></DIV>
+<DIV class=sideblock>
+<H3>Blogroll</H3>
+<UL class="xoxo blogroll">
+  <LI><A href="http://blog.youxu.info/" target=_blank>4G Spaces</A> </LI>
+  <LI><A href="http://aifreedom.com/" target=_blank>Ai.Freedom</A> </LI>
+  <LI><A href="http://asukanokaze.blogbus.com/" target=_blank 
+  rel="friend met">AsukaNoKaze</A> </LI>
+  <LI><A href="http://www.eaglefantasy.cn/" target=_blank>EagleFantasy</A> </LI>
+  <LI><A href="http://mindhacks.cn/" target=_blank>MindHacks</A> </LI>
+  <LI><A href="http://cuitianyi.com/blog/" target=_blank rel=friend>Tianyi</A> 
+  </LI>
+  <LI><A href="http://yueweitang.org/blog/" target=_blank>Zhiqiang</A> 
+</LI></UL></DIV>
+<DIV class=sideblock>
+<H3>Support</H3>
+<DIV class=textwidget>
+<P><A href="http://validator.w3.org/check/referer" target=_blank><IMG 
+alt="XHTML 1.0 Transitional" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/xhtml.png" 
+border=0></A> <A href="http://jigsaw.w3.org/css-validator/validator-uri.html" 
+target=_blank><IMG alt="Css Validator" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/css.gif" 
+border=0></A> <A href="http://www.matrix67.com/blog/archives/feed.asp" 
+target=_blank><IMG alt="RSS 2.0" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/rss2.png" 
+border=0></A> <A href="http://www.matrix67.com/blog/archives/atom.asp" 
+target=_blank><IMG alt="Atom 1.0" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/atom.png" 
+border=0></A> <A href="http://www.mozilla.org/products/firefox/" 
+target=_blank><IMG alt="Get firefox" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/firefox.gif" 
+border=0></A> <A href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" 
+target=_blank><IMG alt="Creative Commons" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/cc.png" 
+border=0></A> <A href="msnim:chat?contact=matrix67@tom.com" target=_blank><IMG 
+alt=MSN 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/msnicon.gif" 
+border=0></A> <A href="mailto:gs.matrix67@gmail.com" target=_blank><IMG 
+alt=GmailMe 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/gmailme.gif" 
+border=0></A> <A 
+href="http://wpa.qq.com/msgrd?V=1&amp;Uin=188932899&amp;Site=www.matrix67.com&amp;Menu=yes" 
+target=_blank><IMG alt=QQ 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/QQ.gif" 
+border=0></A> <A href="http://del.icio.us/matrix67" target=_blank><IMG 
+alt="My del.icio.us" 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/my-del.icio.us.gif" 
+border=0></A> <A href="http://www.imdb.com/mymovies/list?l=19073540" 
+target=_blank><IMG alt=imdb 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/imdb.png" 
+border=0></A> <A href="http://www.last.fm/user/matrix67" target=_blank><IMG 
+alt=Last.fm 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/lastfm.gif" 
+border=0></A></P>
+<P>
+<SCRIPT type=text/javascript><!--
+google_ad_client = "pub-8918918108662869";
+google_ad_slot = "8802076064";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</SCRIPT>
+
+<SCRIPT 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/show_ads.js" 
+type=text/javascript>
+</SCRIPT>
+</P><BR></DIV></DIV></DIV></DIV></DIV>
+<DIV id=footer>
+<P>Powered by <A href="http://wordpress.org/" target=_blank>WordPress</A>. Theme 
+by <A href="http://www.smartertemplates.com/" target=_blank>Smarter 
+Templates</A> &amp; <A href="http://webhostinggeeks.com/" target=_blank>Web 
+Hosting Geeks</A>, Revised by <A 
+href="http://www.matrix67.com/">Matrix67.com</A><BR><A title="使用 RSS 同步" 
+href="http://www.matrix67.com/blog/feed.asp">Entries <ABBR 
+title="Really Simple Syndication">RSS</ABBR></A> | <A title="RSS 上的最近评论" 
+href="http://www.matrix67.com/blog/comments/feed">Comments <ABBR 
+title="Really Simple Syndication">RSS</ABBR></A></P></DIV></DIV>
+<SCRIPT language=javascript type=text/javascript>
+//<![CDATA[
+function listExpand(list)
+{
+   list.style.height="auto";
+   list.style.overflow="visible";
+   list.style.backgroundColor="#404449";
+}
+function listContract(list)
+{
+   list.style.height="16px";
+   list.style.overflow="hidden";
+   list.style.backgroundColor="#2C2F33";
+}
+var els = document.getElementsByTagName("li");
+for (var i = 0; i < els.length; i++)
+{
+   if (els[i].parentNode.parentNode.className=="sideblock"
+      || els[i].parentNode.parentNode.className=="textwidget")
+   { 
+     els[i].onmouseover = function(){listExpand(this)};
+     els[i].onmouseout = function(){listContract(this)};
+   }
+}
+  //]]>
+</SCRIPT>
+
+<DIV style="DISPLAY: none">
+<SCRIPT language=JavaScript 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/stat.htm" 
+type=text/javascript charset=gb2312>
+</SCRIPT>
+</DIV>
+<SCRIPT 
+src="Matrix67 My Blog » Blog Archive » 位运算简介及实用技巧（一）：基础篇.files/urchin.js" 
+type=text/javascript>
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+_uacct = "UA-1093817-1";
+urchinTracker();
+</SCRIPT>
+<!-- Dynamic Page Served (once) in 0.629 seconds --><!-- Cached page generated by WP-Super-Cache on 2010-02-01 14:59:58 --><!-- super cache --></BODY></HTML>

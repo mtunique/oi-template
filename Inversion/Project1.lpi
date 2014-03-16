@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <PathDelim Value="\"/>
+    <Version Value="5"/>
+    <General>
+      <Flags>
+        <MainUnitHasUsesSectionForAllUnits Value="False"/>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+      </Flags>
+      <MainUnit Value="0"/>
+      <IconPath Value="./"/>
+      <TargetFileExt Value=".exe"/>
+      <ActiveEditorIndexAtStart Value="0"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Project1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Project1"/>
+        <CursorPos X="27" Y="3"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="0" HistoryIndex="-1"/>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="5"/>
+    <PathDelim Value="\"/>
+    <CodeGeneration>
+      <Generate Value="Faster"/>
+    </CodeGeneration>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Source Value="..\ÂÌÆ¤\1\prison\prison.pas"/>
+        <Line Value="42"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="11">
+      <Item1>
+        <Expression Value="i"/>
+      </Item1>
+      <Item2>
+        <Expression Value="j"/>
+      </Item2>
+      <Item3>
+        <Expression Value="k"/>
+      </Item3>
+      <Item4>
+        <Expression Value="q"/>
+      </Item4>
+      <Item5>
+        <Expression Value="n"/>
+      </Item5>
+      <Item6>
+        <Expression Value="sum2[i][j]"/>
+      </Item6>
+      <Item7>
+        <Expression Value="temp"/>
+      </Item7>
+      <Item8>
+        <Expression Value="temp2"/>
+      </Item8>
+      <Item9>
+        <Expression Value="f[i][j][k]"/>
+      </Item9>
+      <Item10>
+        <Expression Value="sum[i][j]"/>
+      </Item10>
+      <Item11>
+        <Expression Value="f[i-1][q][k-j]"/>
+      </Item11>
+    </Watches>
+    <Exceptions Count="2">
+      <Item1>
+        <Name Value="ECodetoolError"/>
+      </Item1>
+      <Item2>
+        <Name Value="EFOpenError"/>
+      </Item2>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
