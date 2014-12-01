@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="D:\lazarus\fpc\2.2.4\bin\i386-win32\fpc.exe" Date="995711722"/>
-  <Params Value=" -MObjFPC -Scgi -O1 -gl -vewnhi -l -FiJ:\10.13\number\maker\ -FuJ:\10.13\number\maker\ -Fu. -FEJ:\10.13\number\maker\ -omaker.exe maker"/>
-</CONFIG>

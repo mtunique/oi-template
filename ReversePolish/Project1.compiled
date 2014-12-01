@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="D:\lazarus\fpc\2.6.0\bin\i386-win32\fpc.exe" Date="1080972742"/>
-  <Params Value=" -MObjFPC -Scgi -O1 -gl -vewnhi -l -FuJ:\oi\样品\表达式求值\ -Fu. -oProject1.exe Project1.pas"/>
-</CONFIG>

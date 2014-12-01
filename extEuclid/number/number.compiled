@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="C:\lazarus\fpc\2.2.4\bin\i386-win32\fpc.exe" Date="993895412"/>
-  <Params Value=" -MObjFPC -Scgi -O1 -gl -vewnhi -l -FiH:\20121013-14\10.13\number\change\ -FuH:\20121013-14\10.13\number\change\ -Fu. -FEH:\20121013-14\10.13\number\change\ -onumber.exe number.pas"/>
-</CONFIG>

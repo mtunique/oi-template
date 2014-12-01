@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<CONFIG>
-  <Compiler Value="E:\lazarus\fpc\2.2.4\bin\i386-win32\fpc.exe" Date="995711722"/>
-  <Params Value=" -MObjFPC -Scgi -O1 -gl -vewnhi -l -FiH:\样品\kmp\mkmp\ -FuH:\样品\kmp\mkmp\ -Fu. -FEH:\样品\kmp\mkmp\ -okmp.exe kmp.pas"/>
-</CONFIG>
