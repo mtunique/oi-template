@@ -1,5 +1,0 @@
-<!--STATUS OK-->
-var redmsg="";
-var msgnum = 0;
-var tv = (msgnum>0)?"<span style='color:#FF0000'>"+msgnum+"</span>":msgnum;
-redmsg +="<a href='http://hi.baidu.com/msg/index?from=msg' class='bluelink' target='_blank'>我的消息("+tv+"/20)</a>";
