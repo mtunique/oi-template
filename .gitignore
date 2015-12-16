@@ -96,3 +96,4 @@ target/
 
 .ycm_extra_conf.py
 .idea/
+.gdb_history
