@@ -24,7 +24,3 @@
 - 最小公倍数
 - 强连通分量
 - SPFA
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mtunique/oi-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
